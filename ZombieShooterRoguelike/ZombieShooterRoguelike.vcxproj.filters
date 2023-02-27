@@ -21,18 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="olcPixelGameEngine.h">
-      <Filter>Source Files\Engine Code</Filter>
-    </ClInclude>
-    <ClInclude Include="TravellerEngine.h">
-      <Filter>Source Files\Engine Code</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="olcPixelGameEngine.cpp">
-      <Filter>Source Files\Engine Code</Filter>
-    </ClCompile>
-    <ClCompile Include="TravellerEngine.cpp">
+    <ClCompile Include="Engine Code\main.cpp">
       <Filter>Source Files\Engine Code</Filter>
     </ClCompile>
   </ItemGroup>
