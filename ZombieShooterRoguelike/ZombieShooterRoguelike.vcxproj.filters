@@ -13,10 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Engine Code">
+      <UniqueIdentifier>{18a79592-b14c-44f9-aed3-2405c7f98f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Code">
+      <UniqueIdentifier>{73420cd2-635b-4984-9b86-badfd25ea228}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="olcPixelGameEngine.h">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Engine Code</Filter>
     </ClInclude>
+    <ClInclude Include="TravellerEngine.h">
+      <Filter>Source Files\Engine Code</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="olcPixelGameEngine.cpp">
+      <Filter>Source Files\Engine Code</Filter>
+    </ClCompile>
+    <ClCompile Include="TravellerEngine.cpp">
+      <Filter>Source Files\Engine Code</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
