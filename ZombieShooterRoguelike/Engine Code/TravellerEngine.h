@@ -1,0 +1,58 @@
+#ifndef TRAVELLER_ENGINE_H
+#define TRAVELLER_ENGINE_H
+
+#include <SFML/Graphics.hpp>
+#include <SFML/Graphics/Color.hpp>
+
+#include <string>
+
+class TravellerEngine	// set up as singleton
+{
+private:
+	static TravellerEngine* pInstance;
+
+	TravellerEngine();
+	TravellerEngine(const TravellerEngine& rTraveller) = delete;
+	TravellerEngine& operator=(const TravellerEngine& rTraveller) = delete;
+	virtual ~TravellerEngine();
+
+	static TravellerEngine& Instance();
+
+private: // member variables
+	sf::RenderWindow window;
+	unsigned int screenWidth;
+	unsigned int screenHeight;
+	std::string windowName;
+	sf::Color clearColor;
+
+private: // core engine functions
+	friend class EngineAttorney;
+	void Initialize(); // for one-time non-graphic creation
+	void LoadContent();
+	void Update();
+	void Draw();
+	void UnloadContent();
+
+	void LoadAllResources(); // user-defined function
+	void InitializeGame(); // user-defined function
+	void EndGame(); // user-defined function
+
+	unsigned int privGetScreenWidth();
+	unsigned int privGetScreenHeight();
+	void privSetClearColor(sf::Color color);
+	void privSetWindowSize(unsigned int width, unsigned int height);
+
+	void privRun();
+	void privTerminate();
+
+public: // API functions (static)
+	static unsigned int GetScreenWidth();
+	static unsigned int GetScreenHeight();
+	static void SetClearColor(sf::Color color);
+	static void SetWindowSize(unsigned int width, unsigned int height);
+
+	static void Run();
+	static void Terminate();
+};
+
+#endif

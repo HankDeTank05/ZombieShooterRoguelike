@@ -19,10 +19,66 @@
     <Filter Include="Source Files\Game Code">
       <UniqueIdentifier>{73420cd2-635b-4984-9b86-badfd25ea228}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine Code\Resource Managers">
+      <UniqueIdentifier>{eaf6fe81-7931-4bb6-9bd4-e8478beb21a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Engine">
+      <UniqueIdentifier>{b706fee5-6103-41b2-ba67-f58342fa2c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Time Manager">
+      <UniqueIdentifier>{c4c0f749-ee0c-4d9e-8a58-54daecfa4dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Code\Engine Essentials">
+      <UniqueIdentifier>{2335fc43-60bc-4160-942b-23939aa32a92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine Code\main.cpp">
-      <Filter>Source Files\Engine Code</Filter>
+    <ClCompile Include="Engine Code\TextureManager.cpp">
+      <Filter>Source Files\Engine Code\Resource Managers</Filter>
     </ClCompile>
+    <ClCompile Include="Engine Code\SpriteManager.cpp">
+      <Filter>Source Files\Engine Code\Resource Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\main.cpp">
+      <Filter>Source Files\Engine Code\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\TimeManager.cpp">
+      <Filter>Source Files\Engine Code\Time Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\TravellerEngine.cpp">
+      <Filter>Source Files\Engine Code\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\LoadAllResources.cpp">
+      <Filter>Source Files\Game Code\Engine Essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\InitializeGame.cpp">
+      <Filter>Source Files\Game Code\Engine Essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\EndGame.cpp">
+      <Filter>Source Files\Game Code\Engine Essentials</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\TimeManagerAttorney.cpp">
+      <Filter>Source Files\Engine Code\Time Manager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine Code\TextureManager.h">
+      <Filter>Source Files\Engine Code\Resource Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\SpriteManager.h">
+      <Filter>Source Files\Engine Code\Resource Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\TravellerEngine.h">
+      <Filter>Source Files\Engine Code\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\TimeManager.h">
+      <Filter>Source Files\Engine Code\Time Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Variables.h">
+      <Filter>Source Files\Engine Code\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\TimeManagerAttorney.h">
+      <Filter>Source Files\Engine Code\Time Manager</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
