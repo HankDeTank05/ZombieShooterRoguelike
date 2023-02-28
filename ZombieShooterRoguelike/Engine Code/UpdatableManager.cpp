@@ -23,10 +23,6 @@ UpdatableManager& UpdatableManager::operator=(const UpdatableManager& rUpMgr)
 
 UpdatableManager::~UpdatableManager()
 {
-	for (UpdateListPos pos = updateList.begin(); pos != updateList.end(); pos++)
-	{
-		delete (*pos);
-	}
 	updateList.clear();
 }
 

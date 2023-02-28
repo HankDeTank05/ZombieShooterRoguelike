@@ -5,6 +5,7 @@
 class RegistrationBroker;
 class UpdatableManager;
 class DrawableManager;
+class CameraManager;
 
 class Scene
 {
@@ -19,14 +20,15 @@ public:
 	virtual void Draw() final;
 	virtual void SceneEnd() = 0;
 
-	// virtual void SetCurrentCamera(Camera* pCamera) final;
-	// virtual Camera* GetCurrentCamera() final;
+	// virtual void SetCurrentCamera(Rendering* pCamera) final;
+	// virtual Rendering* GetCurrentCamera() final;
 
 private:
 	RegistrationBroker* pRegBroker;
 
 	UpdatableManager* pUpMgr;
 	DrawableManager* pDrawMgr;
+	CameraManager* pCamMgr;
 };
 
 #endif

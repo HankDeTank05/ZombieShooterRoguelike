@@ -1,18 +1,25 @@
 #ifndef REGISTRATION_BROKER_H
 #define REGISTRATION_BROKER_H
 
+#include <list>
+
+// forward declarations
+class Command;
+
 class RegistrationBroker
 {
 public:
 	RegistrationBroker();
-	RegistrationBroker(const RegistrationBroker& rRegBroker);
-	RegistrationBroker& operator=(const RegistrationBroker& rRegBroker);
+	RegistrationBroker(const RegistrationBroker& rRegBroker) = default;
+	RegistrationBroker& operator=(const RegistrationBroker& rRegBroker) = default;
 	virtual ~RegistrationBroker();
 
-	/// TODO: create the registration broker class
+	void AddCommand(Command* pCmd);
+	void ExecuteCommands();
 
 private:
-	// member variables go here
+	using CommandList = std::list<Command*>;
+	CommandList cmdList;
 };
 
 #endif

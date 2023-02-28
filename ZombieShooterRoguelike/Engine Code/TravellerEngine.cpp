@@ -101,6 +101,11 @@ void TravellerEngine::privTerminate()
 	window.close();
 }
 
+sf::RenderWindow* TravellerEngine::GetCurrentWindow()
+{
+	return Instance().privGetCurrentWindow();
+}
+
 unsigned int TravellerEngine::GetScreenWidth()
 {
 	return Instance().privGetScreenWidth();

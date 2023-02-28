@@ -37,6 +37,9 @@ private: // core engine functions
 	void InitializeGame(); // user-defined function
 	void EndGame(); // user-defined function
 
+private: // private functions
+	sf::RenderWindow* privGetCurrentWindow();
+
 	unsigned int privGetScreenWidth();
 	unsigned int privGetScreenHeight();
 	void privSetClearColor(sf::Color color);
@@ -45,7 +48,11 @@ private: // core engine functions
 	void privRun();
 	void privTerminate();
 
-public: // API functions (static)
+private: // engine/internal API functions (static)
+	friend class EngineAttorney;
+	static sf::RenderWindow* GetCurrentWindow();
+
+public: // public API functions (static)
 	static unsigned int GetScreenWidth();
 	static unsigned int GetScreenHeight();
 	static void SetClearColor(sf::Color color);

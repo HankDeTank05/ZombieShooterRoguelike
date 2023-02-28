@@ -5,6 +5,11 @@ void TravellerEngine::EndGame()
 	// GAME CODE GOES HERE TO END THE GAME
 }
 
+sf::RenderWindow* TravellerEngine::privGetCurrentWindow()
+{
+	return &window;
+}
+
 unsigned int TravellerEngine::privGetScreenWidth()
 {
 	return screenWidth;

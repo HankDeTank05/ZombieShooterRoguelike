@@ -31,14 +31,32 @@
     <Filter Include="Source Files\Game Code\Engine Essentials">
       <UniqueIdentifier>{2335fc43-60bc-4160-942b-23939aa32a92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine Code\Resource Managers\Sprite Manager">
+      <UniqueIdentifier>{5833ca84-1271-4b7d-af89-eccbae3711c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Resource Managers\Texture Manager">
+      <UniqueIdentifier>{50b9c6c7-1100-4e59-9b48-4e7c63c34dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Update System">
+      <UniqueIdentifier>{8b14cae7-4851-4222-b3df-06ae490c0cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Draw System">
+      <UniqueIdentifier>{2a7de788-1e18-4c12-9c7f-f43a17d8cb53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Timer System">
+      <UniqueIdentifier>{11cdb2e5-ef4e-4600-820c-2a2d8fec8cb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Scene System">
+      <UniqueIdentifier>{04815021-2bc8-494b-a2ea-ffc4289cf567}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Camera System">
+      <UniqueIdentifier>{17464629-c1a9-497e-b600-9b07fe4e72f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\Misc.">
+      <UniqueIdentifier>{260e3cd2-d207-48ba-b49b-99630b40c709}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Engine Code\TextureManager.cpp">
-      <Filter>Source Files\Engine Code\Resource Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine Code\SpriteManager.cpp">
-      <Filter>Source Files\Engine Code\Resource Managers</Filter>
-    </ClCompile>
     <ClCompile Include="Engine Code\main.cpp">
       <Filter>Source Files\Engine Code\Engine</Filter>
     </ClCompile>
@@ -60,14 +78,44 @@
     <ClCompile Include="Engine Code\TimeManagerAttorney.cpp">
       <Filter>Source Files\Engine Code\Time Manager</Filter>
     </ClCompile>
+    <ClCompile Include="Engine Code\SpriteManager.cpp">
+      <Filter>Source Files\Engine Code\Resource Managers\Sprite Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\SpriteManagerAttorney.cpp">
+      <Filter>Source Files\Engine Code\Resource Managers\Sprite Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\TextureManager.cpp">
+      <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\TextureManagerAttorney.cpp">
+      <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\UpdatableManager.cpp">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\Updatable.cpp">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\Camera.cpp">
+      <Filter>Source Files\Engine Code\Camera System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\CameraManager.cpp">
+      <Filter>Source Files\Engine Code\Camera System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\EngineAttorney.cpp">
+      <Filter>Source Files\Engine Code\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\RegistrationBroker.cpp">
+      <Filter>Source Files\Engine Code\Scene System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\Scene.cpp">
+      <Filter>Source Files\Engine Code\Scene System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\DrawableManager.cpp">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine Code\TextureManager.h">
-      <Filter>Source Files\Engine Code\Resource Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine Code\SpriteManager.h">
-      <Filter>Source Files\Engine Code\Resource Managers</Filter>
-    </ClInclude>
     <ClInclude Include="Engine Code\TravellerEngine.h">
       <Filter>Source Files\Engine Code\Engine</Filter>
     </ClInclude>
@@ -79,6 +127,48 @@
     </ClInclude>
     <ClInclude Include="Engine Code\TimeManagerAttorney.h">
       <Filter>Source Files\Engine Code\Time Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\SpriteManagerAttorney.h">
+      <Filter>Source Files\Engine Code\Resource Managers\Sprite Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\SpriteManager.h">
+      <Filter>Source Files\Engine Code\Resource Managers\Sprite Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\TextureManagerAttorney.h">
+      <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\TextureManager.h">
+      <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Updatable.h">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\UpdatableManager.h">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Scene.h">
+      <Filter>Source Files\Engine Code\Scene System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\RegistrationBroker.h">
+      <Filter>Source Files\Engine Code\Scene System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Camera.h">
+      <Filter>Source Files\Engine Code\Camera System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\CameraManager.h">
+      <Filter>Source Files\Engine Code\Camera System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\EngineAttorney.h">
+      <Filter>Source Files\Engine Code\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Drawable.h">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Command.h">
+      <Filter>Source Files\Engine Code\Misc.</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\DrawableManager.h">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
