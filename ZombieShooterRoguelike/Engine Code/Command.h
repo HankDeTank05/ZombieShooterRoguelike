@@ -5,8 +5,8 @@ class Command
 {
 public:
 	Command() = default;
-	Command(const Command& rCommand) = delete;
-	Command& operator=(const Command& rCommand) = delete;
+	Command(const Command& c) = delete;
+	Command& operator=(const Command& c) = delete;
 	virtual ~Command() = default;
 
 	virtual void Execute() = 0;

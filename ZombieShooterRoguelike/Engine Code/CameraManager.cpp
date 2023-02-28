@@ -2,57 +2,39 @@
 
 #include "Camera.h"
 
+CameraManager::CameraManager()
+	: pDefaultCamera(new Camera()),
+	pCurrentCamera(pDefaultCamera)
+{
+	// do nothing
+}
+
+CameraManager::CameraManager(const CameraManager& cm)
+	: pDefaultCamera(new Camera(cm.pDefaultCamera)),
+	pCurrentCamera(cm.pCurrentCamera)
+{
+	// do nothing
+}
+
+CameraManager& CameraManager::operator=(const CameraManager& cm)
+{
+	pDefaultCamera = new Camera(cm.pDefaultCamera);
+	pCurrentCamera = cm.pCurrentCamera;
+
+	return *this;
+}
+
+CameraManager::~CameraManager()
+{
+	delete pDefaultCamera;
+}
+
 void CameraManager::SetCurrentCamera(Camera* pCam)
 {
 	pCurrentCamera = pCam;
 }
 
-void CameraManager::SetP1Camera(Camera* pCam)
-{
-	pP1Camera = pCam;
-}
-
-void CameraManager::SetP2Camera(Camera* pCam)
-{
-	pP2Camera = pCam;
-}
-
-void CameraManager::SetP3Camera(Camera* pCam)
-{
-	pP3Camera = pCam;
-}
-
-void CameraManager::SetP4Camera(Camera* pCam)
-{
-	pP4Camera = pCam;
-}
-
 Camera* CameraManager::GetCurrentCamera()
 {
 	return pCurrentCamera;
-}
-
-Camera* CameraManager::GetP1Camera()
-{
-	return pP1Camera;
-}
-
-Camera* CameraManager::GetP2Camera()
-{
-	return pP2Camera;
-}
-
-Camera* CameraManager::GetP3Camera()
-{
-	return pP3Camera;
-}
-
-Camera* CameraManager::GetP4Camera()
-{
-	return pP4Camera;
-}
-
-void CameraManager::SetCameraMode(Mode mode)
-{
-	cameraMode = mode;
 }

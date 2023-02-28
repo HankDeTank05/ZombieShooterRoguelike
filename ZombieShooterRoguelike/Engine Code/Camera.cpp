@@ -21,15 +21,15 @@ Camera::Camera(sf::Vector2f targetPos, sf::Vector2f worldSize)
 	// do nothing
 }
 
-Camera::Camera(const Camera& rCam)
-	: view(rCam.view)
+Camera::Camera(const Camera& c)
+	: view(c.view)
 {
 	// do nothing
 }
 
-Camera& Camera::operator=(const Camera& rCam)
+Camera& Camera::operator=(const Camera& c)
 {
-	view = rCam.view;
+	view = c.view;
 
 	return *this;
 }

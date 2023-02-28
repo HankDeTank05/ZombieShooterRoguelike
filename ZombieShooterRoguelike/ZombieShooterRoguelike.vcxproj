@@ -14,6 +14,7 @@
     <ClCompile Include="Engine Code\Camera.cpp" />
     <ClCompile Include="Engine Code\CameraManager.cpp" />
     <ClCompile Include="Engine Code\DrawableManager.cpp" />
+    <ClCompile Include="Engine Code\DrawRegistrationCommand.cpp" />
     <ClCompile Include="Engine Code\EngineAttorney.cpp" />
     <ClCompile Include="Engine Code\main.cpp" />
     <ClCompile Include="Engine Code\RegistrationBroker.cpp" />
@@ -27,6 +28,8 @@
     <ClCompile Include="Engine Code\TravellerEngine.cpp" />
     <ClCompile Include="Engine Code\Updatable.cpp" />
     <ClCompile Include="Engine Code\UpdatableManager.cpp" />
+    <ClCompile Include="Engine Code\UpdateDeregistrationCommand.cpp" />
+    <ClCompile Include="Engine Code\UpdateRegistrationCommand.cpp" />
     <ClCompile Include="Game Code\EndGame.cpp" />
     <ClCompile Include="Game Code\InitializeGame.cpp" />
     <ClCompile Include="Game Code\LoadAllResources.cpp" />
@@ -37,8 +40,11 @@
     <ClInclude Include="Engine Code\Command.h" />
     <ClInclude Include="Engine Code\Drawable.h" />
     <ClInclude Include="Engine Code\DrawableManager.h" />
+    <ClInclude Include="Engine Code\DrawDeregistrationCommand.h" />
+    <ClInclude Include="Engine Code\DrawRegistrationCommand.h" />
     <ClInclude Include="Engine Code\EngineAttorney.h" />
     <ClInclude Include="Engine Code\RegistrationBroker.h" />
+    <ClInclude Include="Engine Code\RegistrationState.h" />
     <ClInclude Include="Engine Code\Scene.h" />
     <ClInclude Include="Engine Code\SpriteManager.h" />
     <ClInclude Include="Engine Code\SpriteManagerAttorney.h" />
@@ -49,6 +55,8 @@
     <ClInclude Include="Engine Code\TravellerEngine.h" />
     <ClInclude Include="Engine Code\Updatable.h" />
     <ClInclude Include="Engine Code\UpdatableManager.h" />
+    <ClInclude Include="Engine Code\UpdateDeregistrationCommand.h" />
+    <ClInclude Include="Engine Code\UpdateRegistrationCommand.h" />
     <ClInclude Include="Engine Code\Variables.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

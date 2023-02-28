@@ -11,8 +11,8 @@ class Scene
 {
 public:
 	Scene();
-	Scene(const Scene& rScene) = delete;
-	Scene& operator=(const Scene& rScene) = delete;
+	Scene(const Scene& s);
+	Scene& operator=(const Scene& s);
 	virtual ~Scene();
 
 	virtual void Initialize() = 0;

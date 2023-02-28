@@ -10,8 +10,8 @@ class UpdatableManager
 {
 public:
 	UpdatableManager();
-	UpdatableManager(const UpdatableManager& rUpMgr);
-	UpdatableManager& operator=(const UpdatableManager& rUpMgr);
+	UpdatableManager(const UpdatableManager& um);
+	UpdatableManager& operator=(const UpdatableManager& um);
 	virtual ~UpdatableManager();
 
 private:

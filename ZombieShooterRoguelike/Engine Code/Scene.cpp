@@ -14,6 +14,25 @@ Scene::Scene()
 	// do nothing
 }
 
+Scene::Scene(const Scene& s)
+	: pRegBroker(new RegistrationBroker(*s.pRegBroker)),
+	pUpMgr(new UpdatableManager(*s.pUpMgr)),
+	pDrawMgr(new DrawableManager(*s.pDrawMgr)),
+	pCamMgr(new CameraManager(*s.pCamMgr))
+{
+	// do nothing
+}
+
+Scene& Scene::operator=(const Scene& s)
+{
+	pRegBroker = new RegistrationBroker(*s.pRegBroker);
+	pUpMgr = new UpdatableManager(*s.pUpMgr);
+	pDrawMgr = new DrawableManager(*s.pDrawMgr);
+	pCamMgr = new CameraManager(*s.pCamMgr);
+
+	return *this;
+}
+
 Scene::~Scene()
 {
 	delete pCamMgr;

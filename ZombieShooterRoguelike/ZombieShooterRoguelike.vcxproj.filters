@@ -114,6 +114,15 @@
     <ClCompile Include="Engine Code\DrawableManager.cpp">
       <Filter>Source Files\Engine Code\Draw System</Filter>
     </ClCompile>
+    <ClCompile Include="Engine Code\UpdateRegistrationCommand.cpp">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\UpdateDeregistrationCommand.cpp">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\DrawRegistrationCommand.cpp">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine Code\TravellerEngine.h">
@@ -168,6 +177,21 @@
       <Filter>Source Files\Engine Code\Misc.</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\DrawableManager.h">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\RegistrationState.h">
+      <Filter>Source Files\Engine Code\Misc.</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\UpdateRegistrationCommand.h">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\UpdateDeregistrationCommand.h">
+      <Filter>Source Files\Engine Code\Update System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\DrawRegistrationCommand.h">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\DrawDeregistrationCommand.h">
       <Filter>Source Files\Engine Code\Draw System</Filter>
     </ClInclude>
   </ItemGroup>

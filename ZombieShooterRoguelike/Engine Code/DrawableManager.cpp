@@ -9,15 +9,15 @@ DrawableManager::DrawableManager()
 	// do nothing
 }
 
-DrawableManager::DrawableManager(const DrawableManager& rDrawMgr)
-	: drawList(rDrawMgr.drawList)
+DrawableManager::DrawableManager(const DrawableManager& dm)
+	: drawList(dm.drawList)
 {
 	// do nothing
 }
 
-DrawableManager& DrawableManager::operator=(const DrawableManager& rDrawMgr)
+DrawableManager& DrawableManager::operator=(const DrawableManager& dm)
 {
-	drawList = rDrawMgr.drawList;
+	drawList = dm.drawList;
 
 	return *this;
 }

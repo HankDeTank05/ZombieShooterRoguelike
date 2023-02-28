@@ -12,8 +12,8 @@ private:
 	static TravellerEngine* pInstance;
 
 	TravellerEngine();
-	TravellerEngine(const TravellerEngine& rTraveller) = delete;
-	TravellerEngine& operator=(const TravellerEngine& rTraveller) = delete;
+	TravellerEngine(const TravellerEngine& te) = delete;
+	TravellerEngine& operator=(const TravellerEngine& te) = delete;
 	virtual ~TravellerEngine();
 
 	static TravellerEngine& Instance();

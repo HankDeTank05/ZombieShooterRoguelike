@@ -7,8 +7,8 @@ class Camera
 {
 public:
 	Camera();
-	Camera(const Camera& rCam);
-	Camera& operator=(const Camera& rCam);
+	Camera(const Camera& c);
+	Camera& operator=(const Camera& c);
 	virtual ~Camera();
 
 	// construct a camera from the top-left corner position in world space with a width and height

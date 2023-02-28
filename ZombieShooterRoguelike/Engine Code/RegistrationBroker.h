@@ -10,8 +10,8 @@ class RegistrationBroker
 {
 public:
 	RegistrationBroker();
-	RegistrationBroker(const RegistrationBroker& rRegBroker) = default;
-	RegistrationBroker& operator=(const RegistrationBroker& rRegBroker) = default;
+	RegistrationBroker(const RegistrationBroker& rb);
+	RegistrationBroker& operator=(const RegistrationBroker& rb);
 	virtual ~RegistrationBroker();
 
 	void AddCommand(Command* pCmd);

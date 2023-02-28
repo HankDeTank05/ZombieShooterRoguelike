@@ -8,15 +8,15 @@ UpdatableManager::UpdatableManager()
 	// do nothing
 }
 
-UpdatableManager::UpdatableManager(const UpdatableManager& rUpMgr)
-	: updateList(rUpMgr.updateList)
+UpdatableManager::UpdatableManager(const UpdatableManager& um)
+	: updateList(um.updateList)
 {
 	// do nothing
 }
 
-UpdatableManager& UpdatableManager::operator=(const UpdatableManager& rUpMgr)
+UpdatableManager& UpdatableManager::operator=(const UpdatableManager& um)
 {
-	updateList = rUpMgr.updateList;
+	updateList = um.updateList;
 
 	return *this;
 }

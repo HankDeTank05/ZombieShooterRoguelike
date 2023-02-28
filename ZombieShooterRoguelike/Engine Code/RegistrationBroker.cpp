@@ -8,6 +8,19 @@ RegistrationBroker::RegistrationBroker()
 	// do nothing
 }
 
+RegistrationBroker::RegistrationBroker(const RegistrationBroker& rb)
+	: cmdList(rb.cmdList)
+{
+	// do nothing
+}
+
+RegistrationBroker& RegistrationBroker::operator=(const RegistrationBroker& rb)
+{
+	cmdList = rb.cmdList;
+
+	return *this;
+}
+
 RegistrationBroker::~RegistrationBroker()
 {
 	cmdList.clear();

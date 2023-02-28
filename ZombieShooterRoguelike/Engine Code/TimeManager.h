@@ -10,8 +10,8 @@ private:
 	static TimeManager* pInstance;
 
 	TimeManager();
-	TimeManager(const TimeManager& rTimeMgr) = delete;
-	TimeManager& operator=(const TimeManager& rTimeMgr) = delete;
+	TimeManager(const TimeManager& tm) = delete;
+	TimeManager& operator=(const TimeManager& tm) = delete;
 	virtual ~TimeManager();
 
 	static TimeManager& Instance();

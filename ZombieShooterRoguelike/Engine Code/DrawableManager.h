@@ -10,8 +10,8 @@ class DrawableManager
 {
 public:
 	DrawableManager();
-	DrawableManager(const DrawableManager& rDrawMgr);
-	DrawableManager& operator=(const DrawableManager& rDrawMgr);
+	DrawableManager(const DrawableManager& dm);
+	DrawableManager& operator=(const DrawableManager& dm);
 	virtual ~DrawableManager();
 
 private:
