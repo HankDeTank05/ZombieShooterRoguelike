@@ -20,8 +20,8 @@ public:
 	virtual void Draw() final;
 	virtual void SceneEnd() = 0;
 
-	// virtual void SetCurrentCamera(Rendering* pCamera) final;
-	// virtual Rendering* GetCurrentCamera() final;
+private:
+
 
 private:
 	RegistrationBroker* pRegBroker;

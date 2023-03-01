@@ -2,6 +2,7 @@
 
 #include "UpdateRegistrationCommand.h"
 #include "UpdateDeregistrationCommand.h"
+#include <cassert>
 
 Updatable::Updatable()
 	: regState(RegistrationState::CurrentlyDeregistered),
@@ -32,4 +33,11 @@ Updatable::~Updatable()
 {
 	delete pDeregCmd;
 	delete pRegCmd;
+}
+
+void Updatable::EnqueueForUpdateRegistration()
+{
+	assert(regState == RegistrationState::CurrentlyDeregistered);
+
+
 }
