@@ -4,6 +4,5 @@
  This game and its engine are built using SFML.
 
  ## Development Milestiones
-February 27th, 2023: Development begins.
-
-February 27th, 2023: Engine development begins.
+- February 27th, 2023: Development begins.
+- February 27th, 2023: Engine development begins.
