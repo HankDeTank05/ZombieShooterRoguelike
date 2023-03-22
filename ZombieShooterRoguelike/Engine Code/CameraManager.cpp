@@ -10,7 +10,7 @@ CameraManager::CameraManager()
 }
 
 CameraManager::CameraManager(const CameraManager& cm)
-	: pDefaultCamera(new Camera(cm.pDefaultCamera)),
+	: pDefaultCamera(new Camera(*cm.pDefaultCamera)),
 	pCurrentCamera(cm.pCurrentCamera)
 {
 	// do nothing
@@ -18,7 +18,7 @@ CameraManager::CameraManager(const CameraManager& cm)
 
 CameraManager& CameraManager::operator=(const CameraManager& cm)
 {
-	pDefaultCamera = new Camera(cm.pDefaultCamera);
+	pDefaultCamera = new Camera(*cm.pDefaultCamera);
 	pCurrentCamera = cm.pCurrentCamera;
 
 	return *this;
