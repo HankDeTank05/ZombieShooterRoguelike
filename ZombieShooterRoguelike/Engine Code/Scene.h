@@ -2,14 +2,14 @@
 #define SCENE_H
 
 #include "UpdatableManager.h"
-#include "DrawableManager.h"
+#include "TDrawableManager.h"
 
 // forward declarations
 class RegistrationBroker;
 class CameraManager;
 class Command;
 class Updatable;
-class Drawable;
+class TDrawable;
 
 class Scene
 {
@@ -29,14 +29,14 @@ public:
 
 	UpdatableManager::UpdateListPos Register(Updatable* pUpdatable);
 	void Deregister(UpdatableManager::UpdateListPos updateRef);
-	DrawableManager::DrawListPos Register(Drawable* pDrawable);
-	void Deregister(DrawableManager::DrawListPos drawRef);
+	TDrawableManager::DrawListPos Register(TDrawable* pDrawable);
+	void Deregister(TDrawableManager::DrawListPos drawRef);
 
 private:
 	RegistrationBroker* pRegBroker;
 
 	UpdatableManager* pUpMgr;
-	DrawableManager* pDrawMgr;
+	TDrawableManager* pDrawMgr;
 	CameraManager* pCamMgr;
 };
 

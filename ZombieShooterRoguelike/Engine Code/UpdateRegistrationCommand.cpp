@@ -1,5 +1,7 @@
 #include "UpdateRegistrationCommand.h"
 
+#include "Updatable.h"
+
 UpdateRegistrationCommand::UpdateRegistrationCommand(Updatable* _pUpdatable)
 	: pUpdatable(_pUpdatable)
 {
@@ -21,4 +23,9 @@ UpdateRegistrationCommand& UpdateRegistrationCommand::operator=(const UpdateRegi
 UpdateRegistrationCommand::~UpdateRegistrationCommand()
 {
 	// do nothing
+}
+
+void UpdateRegistrationCommand::Execute()
+{
+	pUpdatable->RegisterForUpdate();
 }

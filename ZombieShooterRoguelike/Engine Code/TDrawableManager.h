@@ -1,26 +1,26 @@
-#ifndef DRAWABLE_MANAGER_H
-#define DRAWABLE_MANAGER_H
+#ifndef TDRAWABLE_MANAGER_H
+#define TDRAWABLE_MANAGER_H
 
 #include <list>
 
 // forward declarations
-class Drawable;
+class TDrawable;
 
-class DrawableManager
+class TDrawableManager
 {
 public:
-	DrawableManager();
-	DrawableManager(const DrawableManager& dm);
-	DrawableManager& operator=(const DrawableManager& dm);
-	virtual ~DrawableManager();
+	TDrawableManager();
+	TDrawableManager(const TDrawableManager& dm);
+	TDrawableManager& operator=(const TDrawableManager& dm);
+	virtual ~TDrawableManager();
 
 private:
-	using DrawList = std::list<Drawable*>;
+	using DrawList = std::list<TDrawable*>;
 
 public:
 	using DrawListPos = DrawList::iterator;
 
-	DrawListPos Register(Drawable* pDraw);
+	DrawListPos Register(TDrawable* pDraw);
 	void Deregister(DrawListPos drawListPos);
 
 	void DrawElements();

@@ -1,32 +1,32 @@
-#include "DrawRegistrationCommand.h"
+#include "TDrawRegistrationCommand.h"
 
-#include "Drawable.h"
+#include "TDrawable.h"
 
-DrawRegistrationCommand::DrawRegistrationCommand(Drawable* _pDrawable)
+TDrawRegistrationCommand::TDrawRegistrationCommand(TDrawable* _pDrawable)
 	: pDrawable(_pDrawable)
 {
 	// do nothing
 }
 
-DrawRegistrationCommand::DrawRegistrationCommand(const DrawRegistrationCommand& drc)
+TDrawRegistrationCommand::TDrawRegistrationCommand(const TDrawRegistrationCommand& drc)
 	: pDrawable(drc.pDrawable)
 {
 	// do nothing
 }
 
-DrawRegistrationCommand& DrawRegistrationCommand::operator=(const DrawRegistrationCommand& drc)
+TDrawRegistrationCommand& TDrawRegistrationCommand::operator=(const TDrawRegistrationCommand& drc)
 {
 	pDrawable = drc.pDrawable;
 
 	return *this;
 }
 
-DrawRegistrationCommand::~DrawRegistrationCommand()
+TDrawRegistrationCommand::~TDrawRegistrationCommand()
 {
 	// do nothing
 }
 
-void DrawRegistrationCommand::Execute()
+void TDrawRegistrationCommand::Execute()
 {
-	pDrawable->SceneRegistration();
+	pDrawable->RegisterForDraw();
 }

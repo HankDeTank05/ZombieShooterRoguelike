@@ -18,7 +18,7 @@ public:
 	virtual void Execute() override;
 
 private:
-	Drawable* pDrawable;
+	TDrawable* pDrawable;
 };
 
 #endif

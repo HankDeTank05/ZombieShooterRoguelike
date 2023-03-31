@@ -2,6 +2,7 @@
 #define UPDATABLE_H
 
 #include "RegistrationState.h"
+#include "UpdatableManager.h"
 
 // forward declarations
 class UpdateRegistrationCommand;
@@ -21,7 +22,7 @@ protected:
 	virtual void EnqueueForUpdateRegistration() final;
 	virtual void EnqueueForUpdateDeregistration() final;
 
-private:
+public:
 	void RegisterForUpdate();
 	void DeregisterForUpdate();
 
@@ -29,6 +30,7 @@ private:
 	RegistrationState regState;
 	UpdateRegistrationCommand* pRegCmd;
 	UpdateDeregistrationCommand* pDeregCmd;
+	UpdatableManager::UpdateListPos deleteRef;
 };
 
 #endif

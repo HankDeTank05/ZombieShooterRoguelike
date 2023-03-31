@@ -13,9 +13,10 @@
   <ItemGroup>
     <ClCompile Include="Engine Code\Camera.cpp" />
     <ClCompile Include="Engine Code\CameraManager.cpp" />
-    <ClCompile Include="Engine Code\DrawableManager.cpp" />
-    <ClCompile Include="Engine Code\DrawDeregistrationCommand.cpp" />
-    <ClCompile Include="Engine Code\DrawRegistrationCommand.cpp" />
+    <ClCompile Include="Engine Code\TDrawable.cpp" />
+    <ClCompile Include="Engine Code\TDrawableManager.cpp" />
+    <ClCompile Include="Engine Code\TDrawDeregistrationCommand.cpp" />
+    <ClCompile Include="Engine Code\TDrawRegistrationCommand.cpp" />
     <ClCompile Include="Engine Code\EngineAttorney.cpp" />
     <ClCompile Include="Engine Code\main.cpp" />
     <ClCompile Include="Engine Code\RegistrationBroker.cpp" />
@@ -40,10 +41,10 @@
     <ClInclude Include="Engine Code\Camera.h" />
     <ClInclude Include="Engine Code\CameraManager.h" />
     <ClInclude Include="Engine Code\Command.h" />
-    <ClInclude Include="Engine Code\Drawable.h" />
-    <ClInclude Include="Engine Code\DrawableManager.h" />
-    <ClInclude Include="Engine Code\DrawDeregistrationCommand.h" />
-    <ClInclude Include="Engine Code\DrawRegistrationCommand.h" />
+    <ClInclude Include="Engine Code\TDrawable.h" />
+    <ClInclude Include="Engine Code\TDrawableManager.h" />
+    <ClInclude Include="Engine Code\TDrawDeregistrationCommand.h" />
+    <ClInclude Include="Engine Code\TDrawRegistrationCommand.h" />
     <ClInclude Include="Engine Code\EngineAttorney.h" />
     <ClInclude Include="Engine Code\RegistrationBroker.h" />
     <ClInclude Include="Engine Code\RegistrationState.h" />
@@ -61,6 +62,7 @@
     <ClInclude Include="Engine Code\UpdateDeregistrationCommand.h" />
     <ClInclude Include="Engine Code\UpdateRegistrationCommand.h" />
     <ClInclude Include="Engine Code\Variables.h" />
+    <ClInclude Include="Game Code\ScenePlayerTest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

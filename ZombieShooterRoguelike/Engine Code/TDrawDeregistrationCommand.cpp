@@ -1,7 +1,6 @@
 #include "TDrawDeregistrationCommand.h"
 
-#include "SceneManager.h"
-#include "Scene.h"
+#include "TDrawable.h"
 
 TDrawDeregistrationCommand::TDrawDeregistrationCommand(TDrawable* _pDrawable)
 	: pDrawable(_pDrawable)
@@ -16,5 +15,5 @@ TDrawDeregistrationCommand::~TDrawDeregistrationCommand()
 
 void TDrawDeregistrationCommand::Execute()
 {
-	SceneManager::GetCurrentScene()->
+	pDrawable->DeregisterForDraw();
 }

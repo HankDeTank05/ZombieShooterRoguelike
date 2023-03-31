@@ -1,24 +1,24 @@
-#ifndef DRAW_REGISTRATION_COMMAND_H
-#define DRAW_REGISTRATION_COMMAND_H
+#ifndef TDRAW_REGISTRATION_COMMAND_H
+#define TDRAW_REGISTRATION_COMMAND_H
 
 #include "Command.h"
 
 // forward declarations
-class Drawable;
+class TDrawable;
 
-class DrawRegistrationCommand : public Command
+class TDrawRegistrationCommand : public Command
 {
 public:
-	DrawRegistrationCommand() = delete;
-	DrawRegistrationCommand(Drawable* pDrawable);
-	DrawRegistrationCommand(const DrawRegistrationCommand& drc);
-	DrawRegistrationCommand& operator=(const DrawRegistrationCommand& drc);
-	virtual ~DrawRegistrationCommand();
+	TDrawRegistrationCommand() = delete;
+	TDrawRegistrationCommand(TDrawable* pDrawable);
+	TDrawRegistrationCommand(const TDrawRegistrationCommand& drc);
+	TDrawRegistrationCommand& operator=(const TDrawRegistrationCommand& drc);
+	virtual ~TDrawRegistrationCommand();
 
 	virtual void Execute() override;
 
 private:
-	Drawable* pDrawable;
+	TDrawable* pDrawable;
 };
 
 #endif

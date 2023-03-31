@@ -1,15 +1,16 @@
-#ifndef DRAWABLE_H
-#define DRAWABLE_H
+#ifndef TDRAWABLE_H
+#define TDRAWABLE_H
 
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
 #include "RegistrationState.h"
+#include "TDrawableManager.h"
 
 // forward declarations
-class DrawRegistrationCommand;
-class DrawDeregistrationCommand;
+class TDrawRegistrationCommand;
+class TDrawDeregistrationCommand;
 
 class TDrawable : public sf::Drawable
 {
@@ -20,11 +21,20 @@ public:
 	virtual ~TDrawable();
 
 	virtual void draw(sf::RenderTarget& rTarget, sf::RenderStates states) = 0;
+protected:
+
+	virtual void EnqueueForDrawRegistration() final;
+	virtual void EnqueueForDrawDeregistration() final;
+
+public:
+	void RegisterForDraw();
+	void DeregisterForDraw();
 
 private:
 	RegistrationState regState;
-	DrawRegistrationCommand* pRegCmd;
-	DrawDeregistrationCommand* pDeregCmd;
+	TDrawRegistrationCommand* pRegCmd;
+	TDrawDeregistrationCommand* pDeregCmd;
+	TDrawableManager::DrawListPos deleteRef;
 };
 
 #endif

@@ -2,15 +2,15 @@
 
 #include "RegistrationBroker.h"
 #include "UpdatableManager.h"
-#include "DrawableManager.h"
+#include "TDrawableManager.h"
 #include "CameraManager.h"
 #include "Updatable.h"
-#include "Drawable.h"
+#include "TDrawable.h"
 
 Scene::Scene()
 	: pRegBroker(new RegistrationBroker()),
 	pUpMgr(new UpdatableManager()),
-	pDrawMgr(new DrawableManager()),
+	pDrawMgr(new TDrawableManager()),
 	pCamMgr(new CameraManager())
 {
 	// do nothing
@@ -19,7 +19,7 @@ Scene::Scene()
 Scene::Scene(const Scene& s)
 	: pRegBroker(new RegistrationBroker(*s.pRegBroker)),
 	pUpMgr(new UpdatableManager(*s.pUpMgr)),
-	pDrawMgr(new DrawableManager(*s.pDrawMgr)),
+	pDrawMgr(new TDrawableManager(*s.pDrawMgr)),
 	pCamMgr(new CameraManager(*s.pCamMgr))
 {
 	// do nothing
@@ -29,7 +29,7 @@ Scene& Scene::operator=(const Scene& s)
 {
 	pRegBroker = new RegistrationBroker(*s.pRegBroker);
 	pUpMgr = new UpdatableManager(*s.pUpMgr);
-	pDrawMgr = new DrawableManager(*s.pDrawMgr);
+	pDrawMgr = new TDrawableManager(*s.pDrawMgr);
 	pCamMgr = new CameraManager(*s.pCamMgr);
 
 	return *this;
@@ -71,12 +71,12 @@ void Scene::Deregister(UpdatableManager::UpdateListPos updateRef)
 	pUpMgr->Deregister(updateRef);
 }
 
-DrawableManager::DrawListPos Scene::Register(Drawable* pDrawable)
+TDrawableManager::DrawListPos Scene::Register(TDrawable* pDrawable)
 {
 	return pDrawMgr->Register(pDrawable);
 }
 
-void Scene::Deregister(DrawableManager::DrawListPos drawRef)
+void Scene::Deregister(TDrawableManager::DrawListPos drawRef)
 {
 	pDrawMgr->Deregister(drawRef);
 }

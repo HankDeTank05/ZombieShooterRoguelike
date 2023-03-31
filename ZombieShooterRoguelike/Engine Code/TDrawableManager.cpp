@@ -1,43 +1,43 @@
-#include "DrawableManager.h"
+#include "TDrawableManager.h"
 
-#include "Drawable.h"
+#include "TDrawable.h"
 #include "EngineAttorney.h"
 
-DrawableManager::DrawableManager()
+TDrawableManager::TDrawableManager()
 	: drawList()
 {
 	// do nothing
 }
 
-DrawableManager::DrawableManager(const DrawableManager& dm)
+TDrawableManager::TDrawableManager(const TDrawableManager& dm)
 	: drawList(dm.drawList)
 {
 	// do nothing
 }
 
-DrawableManager& DrawableManager::operator=(const DrawableManager& dm)
+TDrawableManager& TDrawableManager::operator=(const TDrawableManager& dm)
 {
 	drawList = dm.drawList;
 
 	return *this;
 }
 
-DrawableManager::~DrawableManager()
+TDrawableManager::~TDrawableManager()
 {
 	drawList.clear();
 }
 
-DrawableManager::DrawListPos DrawableManager::Register(Drawable* pDraw)
+TDrawableManager::DrawListPos TDrawableManager::Register(TDrawable* pDraw)
 {
 	return drawList.insert(drawList.begin(), pDraw);
 }
 
-void DrawableManager::Deregister(DrawListPos drawListPos)
+void TDrawableManager::Deregister(DrawListPos drawListPos)
 {
 	drawList.erase(drawListPos);
 }
 
-void DrawableManager::DrawElements()
+void TDrawableManager::DrawElements()
 {
 	for (DrawListPos pos = drawList.begin(); pos != drawList.end(); pos++)
 	{
