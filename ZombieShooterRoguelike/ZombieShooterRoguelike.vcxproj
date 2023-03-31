@@ -14,6 +14,7 @@
     <ClCompile Include="Engine Code\Camera.cpp" />
     <ClCompile Include="Engine Code\CameraManager.cpp" />
     <ClCompile Include="Engine Code\DrawableManager.cpp" />
+    <ClCompile Include="Engine Code\DrawDeregistrationCommand.cpp" />
     <ClCompile Include="Engine Code\DrawRegistrationCommand.cpp" />
     <ClCompile Include="Engine Code\EngineAttorney.cpp" />
     <ClCompile Include="Engine Code\main.cpp" />

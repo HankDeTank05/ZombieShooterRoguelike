@@ -1,5 +1,8 @@
 #include "UpdateDeregistrationCommand.h"
 
+#include "SceneManager.h"
+#include "Scene.h"
+
 UpdateDeregistrationCommand::UpdateDeregistrationCommand(Updatable* _pUpdatable)
 	: pUpdatable(_pUpdatable)
 {
@@ -21,4 +24,9 @@ UpdateDeregistrationCommand& UpdateDeregistrationCommand::operator=(const Update
 UpdateDeregistrationCommand::~UpdateDeregistrationCommand()
 {
 	// do nothing
+}
+
+void UpdateDeregistrationCommand::Execute()
+{
+	SceneManager::GetCurrentScene()->Deregister(pUpdatable);
 }

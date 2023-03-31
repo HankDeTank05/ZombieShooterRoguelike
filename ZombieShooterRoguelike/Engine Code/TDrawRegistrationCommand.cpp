@@ -1,5 +1,7 @@
 #include "DrawRegistrationCommand.h"
 
+#include "Drawable.h"
+
 DrawRegistrationCommand::DrawRegistrationCommand(Drawable* _pDrawable)
 	: pDrawable(_pDrawable)
 {
@@ -22,4 +24,9 @@ DrawRegistrationCommand& DrawRegistrationCommand::operator=(const DrawRegistrati
 DrawRegistrationCommand::~DrawRegistrationCommand()
 {
 	// do nothing
+}
+
+void DrawRegistrationCommand::Execute()
+{
+	pDrawable->SceneRegistration();
 }

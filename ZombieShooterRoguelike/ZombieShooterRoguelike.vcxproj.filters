@@ -126,6 +126,9 @@
     <ClCompile Include="Engine Code\SceneManager.cpp">
       <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
+    <ClCompile Include="Engine Code\DrawDeregistrationCommand.cpp">
+      <Filter>Source Files\Engine Code\Draw System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine Code\TravellerEngine.h">

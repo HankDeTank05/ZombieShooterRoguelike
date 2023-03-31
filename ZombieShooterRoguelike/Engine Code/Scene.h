@@ -1,11 +1,15 @@
 #ifndef SCENE_H
 #define SCENE_H
 
+#include "UpdatableManager.h"
+#include "DrawableManager.h"
+
 // forward declarations
 class RegistrationBroker;
-class UpdatableManager;
-class DrawableManager;
 class CameraManager;
+class Command;
+class Updatable;
+class Drawable;
 
 class Scene
 {
@@ -20,8 +24,13 @@ public:
 	virtual void Draw() final;
 	virtual void SceneEnd() = 0;
 
-private:
+public:
+	void EnqueueCommand(Command* pCommand);
 
+	UpdatableManager::UpdateListPos Register(Updatable* pUpdatable);
+	void Deregister(UpdatableManager::UpdateListPos updateRef);
+	DrawableManager::DrawListPos Register(Drawable* pDrawable);
+	void Deregister(DrawableManager::DrawListPos drawRef);
 
 private:
 	RegistrationBroker* pRegBroker;

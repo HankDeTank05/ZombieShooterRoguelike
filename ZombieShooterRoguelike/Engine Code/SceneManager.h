@@ -3,6 +3,7 @@
 
 // forward declarations
 class Scene;
+class Command;
 
 class SceneManager	// set up as singleton
 {
@@ -21,6 +22,7 @@ private: // member variables
 
 private: // private functions
 	void privSetStartScene(Scene* pScene);
+	void privInitStartScene();
 	Scene* privGetCurrentScene();
 
 	void privUpdateCurrentScene();
@@ -30,6 +32,7 @@ private: // private functions
 
 public: // API functions (static)
 	static void SetStartScene(Scene* pScene);
+	static void InitStartScene();
 	static Scene* GetCurrentScene();
 
 	static void UpdateCurrentScene();

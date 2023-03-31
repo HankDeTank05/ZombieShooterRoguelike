@@ -4,6 +4,8 @@
 #include "UpdatableManager.h"
 #include "DrawableManager.h"
 #include "CameraManager.h"
+#include "Updatable.h"
+#include "Drawable.h"
 
 Scene::Scene()
 	: pRegBroker(new RegistrationBroker()),
@@ -52,4 +54,29 @@ void Scene::Update()
 void Scene::Draw()
 {
 	pDrawMgr->DrawElements();
+}
+
+void Scene::EnqueueCommand(Command* pCommand)
+{
+	pRegBroker->AddCommand(pCommand);
+}
+
+UpdatableManager::UpdateListPos Scene::Register(Updatable* pUpdatable)
+{
+	return pUpMgr->Register(pUpdatable);
+}
+
+void Scene::Deregister(UpdatableManager::UpdateListPos updateRef)
+{
+	pUpMgr->Deregister(updateRef);
+}
+
+DrawableManager::DrawListPos Scene::Register(Drawable* pDrawable)
+{
+	return pDrawMgr->Register(pDrawable);
+}
+
+void Scene::Deregister(DrawableManager::DrawListPos drawRef)
+{
+	pDrawMgr->Deregister(drawRef);
 }
