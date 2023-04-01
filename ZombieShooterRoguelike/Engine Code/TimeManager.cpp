@@ -27,9 +27,9 @@ TimeManager& TimeManager::Instance()
 
 void TimeManager::privProcessTime()
 {
-	currentTime = pClock->getElapsedTime();
+	previousTime = currentTime;
 
-	previousTime = frameTime;
+	currentTime = pClock->getElapsedTime();
 
 	frameTime = currentTime - previousTime;
 }

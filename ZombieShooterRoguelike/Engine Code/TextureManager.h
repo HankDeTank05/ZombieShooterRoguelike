@@ -20,6 +20,8 @@ private:
 
 	using TextureMap = std::map<std::string, sf::Texture*>;
 
+	static std::string FOLDER_NAME;
+
 private: // member variables
 	TextureMap textureMap;
 
@@ -30,7 +32,7 @@ private: // private functions
 	void privTerminate();
 
 public: // API functions (static)
-	static void LoadTexure(std::string filePath, std::string keyName, bool renderSmooth = false, bool renderRepeated = false);
+	static void LoadTexure(std::string fileName, std::string keyName, bool renderSmooth = false, bool renderRepeated = false);
 	static sf::Texture* GetTexture(std::string keyName);
 
 	static void Terminate();

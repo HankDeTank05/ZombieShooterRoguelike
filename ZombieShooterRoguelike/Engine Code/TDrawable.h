@@ -20,7 +20,7 @@ public:
 	TDrawable& operator=(const TDrawable& d) = delete;
 	virtual ~TDrawable();
 
-	virtual void draw(sf::RenderTarget& rTarget, sf::RenderStates states) = 0;
+	virtual void draw(sf::RenderTarget& rTarget, sf::RenderStates states) const = 0;
 protected:
 
 	virtual void EnqueueForDrawRegistration() final;

@@ -36,6 +36,11 @@
     <ClCompile Include="Game Code\EndGame.cpp" />
     <ClCompile Include="Game Code\InitializeGame.cpp" />
     <ClCompile Include="Game Code\LoadAllResources.cpp" />
+    <ClCompile Include="Game Code\Pellet.cpp" />
+    <ClCompile Include="Game Code\Player.cpp" />
+    <ClCompile Include="Game Code\ScenePlayerTest.cpp" />
+    <ClCompile Include="Game Code\Shotgun.cpp" />
+    <ClCompile Include="Game Code\Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine Code\Camera.h" />
@@ -62,7 +67,11 @@
     <ClInclude Include="Engine Code\UpdateDeregistrationCommand.h" />
     <ClInclude Include="Engine Code\UpdateRegistrationCommand.h" />
     <ClInclude Include="Engine Code\Variables.h" />
+    <ClInclude Include="Game Code\Pellet.h" />
+    <ClInclude Include="Game Code\Player.h" />
     <ClInclude Include="Game Code\ScenePlayerTest.h" />
+    <ClInclude Include="Game Code\Shotgun.h" />
+    <ClInclude Include="Game Code\Weapon.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

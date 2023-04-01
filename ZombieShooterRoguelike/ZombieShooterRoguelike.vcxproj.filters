@@ -58,6 +58,12 @@
     <Filter Include="Source Files\Engine Code\X-ables\2. Draw System">
       <UniqueIdentifier>{2a7de788-1e18-4c12-9c7f-f43a17d8cb53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Game Code\Weapons">
+      <UniqueIdentifier>{5520ac92-ccbb-4419-81e9-b2bee62ee195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Code\Weapons\Shotgun">
+      <UniqueIdentifier>{339b04bb-9206-4186-893c-84fe117f9193}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine Code\main.cpp">
@@ -135,6 +141,21 @@
     <ClCompile Include="Engine Code\TDrawable.cpp">
       <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
     </ClCompile>
+    <ClCompile Include="Game Code\Player.cpp">
+      <Filter>Source Files\Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\ScenePlayerTest.cpp">
+      <Filter>Source Files\Game Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\Weapon.cpp">
+      <Filter>Source Files\Game Code\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\Shotgun.cpp">
+      <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
+    </ClCompile>
+    <ClCompile Include="Game Code\Pellet.cpp">
+      <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine Code\TravellerEngine.h">
@@ -211,6 +232,18 @@
     </ClInclude>
     <ClInclude Include="Game Code\ScenePlayerTest.h">
       <Filter>Source Files\Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Code\Player.h">
+      <Filter>Source Files\Game Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Code\Weapon.h">
+      <Filter>Source Files\Game Code\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Code\Shotgun.h">
+      <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Code\Pellet.h">
+      <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

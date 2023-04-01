@@ -3,6 +3,7 @@
 #include <cassert>
 
 TextureManager* TextureManager::pInstance = nullptr;
+std::string TextureManager::FOLDER_NAME = "../Assets/Textures/";
 
 TextureManager::TextureManager()
 	: textureMap()
@@ -28,10 +29,13 @@ void TextureManager::privLoadTexture(std::string filePath, std::string keyName, 
 {
 	assert(textureMap.count(keyName) == 0); // key already exists in the map!
 
+	std::string relativePath = FOLDER_NAME + filePath;
+
 	sf::Texture* texture = new sf::Texture();
-	if (texture->loadFromFile(filePath) == false)
+	if (texture->loadFromFile(relativePath) == false)
 	{
 		assert(false); // file could not be loaded!
+		// NOTE: to debug, comment out the above line to see the error message SFML prints to the output window
 	}
 
 	texture->setSmooth(renderSmooth);

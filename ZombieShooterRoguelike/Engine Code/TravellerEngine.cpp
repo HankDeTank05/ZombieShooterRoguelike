@@ -5,6 +5,8 @@
 #include "TimeManagerAttorney.h"
 #include "SpriteManagerAttorney.h"
 #include "TextureManagerAttorney.h"
+#include "SceneManager.h"
+#include "Scene.h"
 
 TravellerEngine* TravellerEngine::pInstance = nullptr;
 
@@ -45,13 +47,13 @@ void TravellerEngine::LoadContent()
 void TravellerEngine::Update()
 {
 	TimeManagerAttorney::Engine::ProcessTime();
-	
-	// TODO: add stuff to the engine Update function
+
+	SceneManager::UpdateCurrentScene();
 }
 
 void TravellerEngine::Draw()
 {
-	// TODO: add stuff to the engine Draw function
+	SceneManager::DrawCurrentScene();
 }
 
 void TravellerEngine::UnloadContent()
