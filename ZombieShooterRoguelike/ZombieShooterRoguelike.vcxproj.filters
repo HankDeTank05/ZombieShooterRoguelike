@@ -64,6 +64,9 @@
     <Filter Include="Source Files\Game Code\Weapons\Shotgun">
       <UniqueIdentifier>{339b04bb-9206-4186-893c-84fe117f9193}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine Code\X-ables\3. Input System">
+      <UniqueIdentifier>{205a39f2-8d3a-4528-af6d-00e3fe9799bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine Code\main.cpp">
@@ -156,6 +159,9 @@
     <ClCompile Include="Game Code\Pellet.cpp">
       <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
     </ClCompile>
+    <ClCompile Include="Engine Code\Inputable.cpp">
+      <Filter>Source Files\Engine Code\X-ables\3. Input System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine Code\TravellerEngine.h">
@@ -244,6 +250,12 @@
     </ClInclude>
     <ClInclude Include="Game Code\Pellet.h">
       <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\Inputable.h">
+      <Filter>Source Files\Engine Code\X-ables\3. Input System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\KeyEvent.h">
+      <Filter>Source Files\Engine Code\Misc.</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
