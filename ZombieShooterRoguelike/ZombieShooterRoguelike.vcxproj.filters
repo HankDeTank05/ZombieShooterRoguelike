@@ -49,22 +49,22 @@
     <Filter Include="Source Files\Engine Code\Misc.">
       <UniqueIdentifier>{260e3cd2-d207-48ba-b49b-99630b40c709}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine Code\X-ables">
-      <UniqueIdentifier>{30c72d82-a121-4c7f-a3ae-8d6720fdd4c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine Code\X-ables\1. Update System">
-      <UniqueIdentifier>{8b14cae7-4851-4222-b3df-06ae490c0cde}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine Code\X-ables\2. Draw System">
-      <UniqueIdentifier>{2a7de788-1e18-4c12-9c7f-f43a17d8cb53}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Game Code\Weapons">
       <UniqueIdentifier>{5520ac92-ccbb-4419-81e9-b2bee62ee195}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Game Code\Weapons\Shotgun">
       <UniqueIdentifier>{339b04bb-9206-4186-893c-84fe117f9193}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine Code\X-ables\3. Input System">
+    <Filter Include="Source Files\Engine Code\GameObject + X-able System">
+      <UniqueIdentifier>{30c72d82-a121-4c7f-a3ae-8d6720fdd4c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-able System\1. Update System">
+      <UniqueIdentifier>{8b14cae7-4851-4222-b3df-06ae490c0cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-able System\2. Draw System">
+      <UniqueIdentifier>{2a7de788-1e18-4c12-9c7f-f43a17d8cb53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-able System\3. Input System">
       <UniqueIdentifier>{205a39f2-8d3a-4528-af6d-00e3fe9799bd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -103,10 +103,10 @@
       <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\UpdatableManager.cpp">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\Updatable.cpp">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\Camera.cpp">
       <Filter>Source Files\Engine Code\Camera System</Filter>
@@ -124,25 +124,25 @@
       <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\TDrawableManager.cpp">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\UpdateRegistrationCommand.cpp">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\UpdateDeregistrationCommand.cpp">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\TDrawRegistrationCommand.cpp">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\SceneManager.cpp">
       <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\TDrawDeregistrationCommand.cpp">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\TDrawable.cpp">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClCompile>
     <ClCompile Include="Game Code\Player.cpp">
       <Filter>Source Files\Game Code</Filter>
@@ -160,7 +160,16 @@
       <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\Inputable.cpp">
-      <Filter>Source Files\Engine Code\X-ables\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\InputRegistrationCommand.cpp">
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\InputableAttorney.cpp">
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\InputDeregistrationCommand.cpp">
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -189,10 +198,10 @@
       <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\Updatable.h">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\UpdatableManager.h">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\Scene.h">
       <Filter>Source Files\Engine Code\Scene System</Filter>
@@ -210,28 +219,28 @@
       <Filter>Source Files\Engine Code\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\TDrawable.h">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\Command.h">
       <Filter>Source Files\Engine Code\Misc.</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\TDrawableManager.h">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\RegistrationState.h">
       <Filter>Source Files\Engine Code\Misc.</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\UpdateRegistrationCommand.h">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\UpdateDeregistrationCommand.h">
-      <Filter>Source Files\Engine Code\X-ables\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\TDrawRegistrationCommand.h">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\TDrawDeregistrationCommand.h">
-      <Filter>Source Files\Engine Code\X-ables\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\SceneManager.h">
       <Filter>Source Files\Engine Code\Scene System</Filter>
@@ -252,10 +261,19 @@
       <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\Inputable.h">
-      <Filter>Source Files\Engine Code\X-ables\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\KeyEvent.h">
       <Filter>Source Files\Engine Code\Misc.</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\InputRegistrationCommand.h">
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\InputableAttorney.h">
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\InputDeregistrationCommand.h">
+      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -28,8 +28,8 @@ protected:
 	void EnqueueForInputDeregistration(sf::Keyboard::Key key, KeyEvent eventToDeregFor);
 
 public:
-	void RegisterForInputReading();
-	void DeregisterForInputReading();
+	void RegisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToRegFor);
+	void DeregisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToDeregFor);
 
 	struct RegistrationData
 	{
