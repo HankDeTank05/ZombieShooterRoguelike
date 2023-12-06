@@ -11,29 +11,30 @@ Scene::Scene()
 	: pRegBroker(new RegistrationBroker()),
 	pUpMgr(new UpdatableManager()),
 	pDrawMgr(new TDrawableManager()),
+	pInMgr(new InputableManager()),
 	pCamMgr(new CameraManager())
 {
 	// do nothing
 }
-
-Scene::Scene(const Scene& s)
-	: pRegBroker(new RegistrationBroker(*s.pRegBroker)),
-	pUpMgr(new UpdatableManager(*s.pUpMgr)),
-	pDrawMgr(new TDrawableManager(*s.pDrawMgr)),
-	pCamMgr(new CameraManager(*s.pCamMgr))
-{
-	// do nothing
-}
-
-Scene& Scene::operator=(const Scene& s)
-{
-	pRegBroker = new RegistrationBroker(*s.pRegBroker);
-	pUpMgr = new UpdatableManager(*s.pUpMgr);
-	pDrawMgr = new TDrawableManager(*s.pDrawMgr);
-	pCamMgr = new CameraManager(*s.pCamMgr);
-
-	return *this;
-}
+//
+//Scene::Scene(const Scene& s)
+//	: pRegBroker(new RegistrationBroker(*s.pRegBroker)),
+//	pUpMgr(new UpdatableManager(*s.pUpMgr)),
+//	pDrawMgr(new TDrawableManager(*s.pDrawMgr)),
+//	pCamMgr(new CameraManager(*s.pCamMgr))
+//{
+//	// do nothing
+//}
+//
+//Scene& Scene::operator=(const Scene& s)
+//{
+//	pRegBroker = new RegistrationBroker(*s.pRegBroker);
+//	pUpMgr = new UpdatableManager(*s.pUpMgr);
+//	pDrawMgr = new TDrawableManager(*s.pDrawMgr);
+//	pCamMgr = new CameraManager(*s.pCamMgr);
+//
+//	return *this;
+//}
 
 Scene::~Scene()
 {
@@ -79,4 +80,14 @@ TDrawableManager::DrawListPos Scene::Register(TDrawable* pDrawable)
 void Scene::Deregister(TDrawableManager::DrawListPos drawRef)
 {
 	pDrawMgr->Deregister(drawRef);
+}
+
+KeyListener::NotifyListPos Scene::Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, Inputable* pInputable)
+{
+	return pInMgr->Register(key, eventToRegFor, pInputable);
+}
+
+void Scene::Deregister(sf::Keyboard::Key key, KeyEvent eventToDeregFor, KeyListener::NotifyListPos inputRef)
+{
+	pInMgr->Deregister(key, eventToDeregFor, inputRef);
 }

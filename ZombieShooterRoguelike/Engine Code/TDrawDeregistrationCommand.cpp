@@ -1,6 +1,7 @@
 #include "TDrawDeregistrationCommand.h"
 
 #include "TDrawable.h"
+#include "TDrawableAttorney.h"
 
 TDrawDeregistrationCommand::TDrawDeregistrationCommand(TDrawable* _pDrawable)
 	: pDrawable(_pDrawable)
@@ -15,5 +16,5 @@ TDrawDeregistrationCommand::~TDrawDeregistrationCommand()
 
 void TDrawDeregistrationCommand::Execute()
 {
-	pDrawable->DeregisterForDraw();
+	TDrawableAttorney::Registration::DeregisterForDraw(pDrawable);
 }

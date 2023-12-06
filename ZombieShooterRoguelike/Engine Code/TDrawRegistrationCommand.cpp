@@ -1,6 +1,7 @@
 #include "TDrawRegistrationCommand.h"
 
 #include "TDrawable.h"
+#include "TDrawableAttorney.h"
 
 TDrawRegistrationCommand::TDrawRegistrationCommand(TDrawable* _pDrawable)
 	: pDrawable(_pDrawable)
@@ -28,5 +29,6 @@ TDrawRegistrationCommand::~TDrawRegistrationCommand()
 
 void TDrawRegistrationCommand::Execute()
 {
-	pDrawable->RegisterForDraw();
+
+	TDrawableAttorney::Registration::RegisterForDraw(pDrawable);
 }

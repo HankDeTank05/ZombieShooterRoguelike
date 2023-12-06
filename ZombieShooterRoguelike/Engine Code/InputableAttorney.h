@@ -11,6 +11,7 @@ class Inputable;
 class InputableAttorney
 {
 public:
+
 	class Registration
 	{
 	private:

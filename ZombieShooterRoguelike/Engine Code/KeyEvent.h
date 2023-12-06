@@ -3,8 +3,8 @@
 
 enum class KeyEvent
 {
-	KeyPressed,
-	KeyReleased,
+	Press,
+	Release,
 };
 
 #endif

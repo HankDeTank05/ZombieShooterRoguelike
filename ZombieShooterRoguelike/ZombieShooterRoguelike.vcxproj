@@ -15,9 +15,12 @@
     <ClCompile Include="Engine Code\CameraManager.cpp" />
     <ClCompile Include="Engine Code\Inputable.cpp" />
     <ClCompile Include="Engine Code\InputableAttorney.cpp" />
+    <ClCompile Include="Engine Code\InputableManager.cpp" />
     <ClCompile Include="Engine Code\InputDeregistrationCommand.cpp" />
     <ClCompile Include="Engine Code\InputRegistrationCommand.cpp" />
+    <ClCompile Include="Engine Code\KeyListener.cpp" />
     <ClCompile Include="Engine Code\TDrawable.cpp" />
+    <ClCompile Include="Engine Code\TDrawableAttorney.cpp" />
     <ClCompile Include="Engine Code\TDrawableManager.cpp" />
     <ClCompile Include="Engine Code\TDrawDeregistrationCommand.cpp" />
     <ClCompile Include="Engine Code\TDrawRegistrationCommand.cpp" />
@@ -53,9 +56,12 @@
     <ClInclude Include="Engine Code\Inputable.h" />
     <ClInclude Include="Engine Code\InputableAttorney.h" />
     <ClInclude Include="Engine Code\InputDeregistrationCommand.h" />
+    <ClInclude Include="Engine Code\InputableManager.h" />
     <ClInclude Include="Engine Code\InputRegistrationCommand.h" />
     <ClInclude Include="Engine Code\KeyEvent.h" />
+    <ClInclude Include="Engine Code\KeyListener.h" />
     <ClInclude Include="Engine Code\TDrawable.h" />
+    <ClInclude Include="Engine Code\TDrawableAttorney.h" />
     <ClInclude Include="Engine Code\TDrawableManager.h" />
     <ClInclude Include="Engine Code\TDrawDeregistrationCommand.h" />
     <ClInclude Include="Engine Code\TDrawRegistrationCommand.h" />
@@ -93,13 +99,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>

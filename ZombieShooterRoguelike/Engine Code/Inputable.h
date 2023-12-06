@@ -7,9 +7,10 @@
 
 #include "RegistrationState.h"
 #include "KeyEvent.h"
+#include "KeyListener.h"
 
 // forward declarations
-class InputRegistrationCommmand;
+class InputRegistrationCommand;
 class InputDeregistrationCommand;
 
 class Inputable
@@ -27,15 +28,18 @@ protected:
 	void EnqueueForInputRegistration(sf::Keyboard::Key key, KeyEvent eventToRegFor);
 	void EnqueueForInputDeregistration(sf::Keyboard::Key key, KeyEvent eventToDeregFor);
 
-public:
+private:
+	friend class InputableAttorney;
+
 	void RegisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToRegFor);
 	void DeregisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToDeregFor);
 
 	struct RegistrationData
 	{
 		RegistrationState regState;
-		InputRegistrationCommmand* pRegCmd;
+		InputRegistrationCommand* pRegCmd;
 		InputDeregistrationCommand* pDeregCmd;
+		KeyListener::NotifyListPos listPos;
 	};
 
 	using KeyTrackerID = std::pair<sf::Keyboard::Key, KeyEvent>;

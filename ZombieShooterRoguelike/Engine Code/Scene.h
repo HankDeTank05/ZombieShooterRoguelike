@@ -3,6 +3,8 @@
 
 #include "UpdatableManager.h"
 #include "TDrawableManager.h"
+#include "KeyListener.h"
+#include "InputableManager.h"
 
 // forward declarations
 class RegistrationBroker;
@@ -15,8 +17,8 @@ class Scene
 {
 public:
 	Scene();
-	Scene(const Scene& s);
-	Scene& operator=(const Scene& s);
+	Scene(const Scene& s) = delete;
+	Scene& operator=(const Scene& s) = delete;
 	virtual ~Scene();
 
 	virtual void Initialize() = 0;
@@ -29,14 +31,20 @@ public:
 
 	UpdatableManager::UpdateListPos Register(Updatable* pUpdatable);
 	void Deregister(UpdatableManager::UpdateListPos updateRef);
+
 	TDrawableManager::DrawListPos Register(TDrawable* pDrawable);
 	void Deregister(TDrawableManager::DrawListPos drawRef);
+
+	KeyListener::NotifyListPos Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, Inputable* pInputable);
+	void Deregister(sf::Keyboard::Key key, KeyEvent eventToDeregFor, KeyListener::NotifyListPos inputRef);
 
 private:
 	RegistrationBroker* pRegBroker;
 
 	UpdatableManager* pUpMgr;
 	TDrawableManager* pDrawMgr;
+	InputableManager* pInMgr;
+
 	CameraManager* pCamMgr;
 };
 

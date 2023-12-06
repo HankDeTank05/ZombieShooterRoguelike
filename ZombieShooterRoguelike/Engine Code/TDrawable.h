@@ -26,7 +26,9 @@ protected:
 	virtual void EnqueueForDrawRegistration() final;
 	virtual void EnqueueForDrawDeregistration() final;
 
-public:
+private:
+	friend class TDrawableAttorney;
+
 	void RegisterForDraw();
 	void DeregisterForDraw();
 
