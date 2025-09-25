@@ -1,6 +1,6 @@
-#include "../Engine Code/TravellerEngine.h"
+#include "../Engine Code/TravelerEngine.h"
 
-void TravellerEngine::InitializeGame()
+void TravelerEngine::InitializeGame()
 {
 	// GAME CODE GOES HERE TO INITIALIZE THE GAME
 }

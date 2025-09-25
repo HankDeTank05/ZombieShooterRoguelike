@@ -1,11 +1,11 @@
-#include "TravellerEngine.h"
+#include "TravelerEngine.h"
 
 
 int main()
 {
-	TravellerEngine::Run();
+	TravelerEngine::Run();
 
-	TravellerEngine::Terminate();
+	TravelerEngine::Terminate();
 
 	return 0;
 }

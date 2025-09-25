@@ -9,6 +9,17 @@ InputManager::InputManager()
 	// do nothing
 }
 
+InputManager::~InputManager()
+{
+	for (KeyTracker::iterator it = keyTracker.begin(); it != keyTracker.end(); it++)
+	{
+		if ((*it).second != nullptr)
+		{
+			delete (*it).second;
+		}
+	}
+}
+
 KeyListener::NotifyListPos InputManager::Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, InputObject* pInputable)
 {
 	if (keyTracker.count(key) == 0)

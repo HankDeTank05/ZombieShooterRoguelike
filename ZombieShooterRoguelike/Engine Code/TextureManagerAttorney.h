@@ -7,7 +7,7 @@ public:
 	class Termination
 	{
 	private:
-		friend class TravellerEngine;
+		friend class TravelerEngine;
 		static void Terminate();
 	};
 };

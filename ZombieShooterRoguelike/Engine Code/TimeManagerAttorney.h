@@ -6,7 +6,7 @@ class TimeManagerAttorney
 public:
 	class Engine
 	{
-		friend class TravellerEngine;
+		friend class TravelerEngine;
 		static void ProcessTime();
 	};
 };

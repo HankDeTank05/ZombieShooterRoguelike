@@ -55,18 +55,6 @@
     <Filter Include="Source Files\Game Code\Weapons\Shotgun">
       <UniqueIdentifier>{339b04bb-9206-4186-893c-84fe117f9193}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Engine Code\GameObject + X-able System">
-      <UniqueIdentifier>{30c72d82-a121-4c7f-a3ae-8d6720fdd4c6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine Code\GameObject + X-able System\1. Update System">
-      <UniqueIdentifier>{8b14cae7-4851-4222-b3df-06ae490c0cde}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine Code\GameObject + X-able System\2. Draw System">
-      <UniqueIdentifier>{2a7de788-1e18-4c12-9c7f-f43a17d8cb53}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine Code\GameObject + X-able System\3. Input System">
-      <UniqueIdentifier>{205a39f2-8d3a-4528-af6d-00e3fe9799bd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Engine Code\Commands">
       <UniqueIdentifier>{8f9b2061-8719-45b7-91e7-0c2851feefea}</UniqueIdentifier>
     </Filter>
@@ -78,6 +66,18 @@
     </Filter>
     <Filter Include="Source Files\Engine Code\Commands\Input System">
       <UniqueIdentifier>{bb507b6c-23a4-4646-9f07-29c2569a352f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-Object System">
+      <UniqueIdentifier>{30c72d82-a121-4c7f-a3ae-8d6720fdd4c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-Object System\1. Update System">
+      <UniqueIdentifier>{8b14cae7-4851-4222-b3df-06ae490c0cde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-Object System\2. Draw System">
+      <UniqueIdentifier>{2a7de788-1e18-4c12-9c7f-f43a17d8cb53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Code\GameObject + X-Object System\3. Input System">
+      <UniqueIdentifier>{205a39f2-8d3a-4528-af6d-00e3fe9799bd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -115,10 +115,10 @@
       <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\UpdateManager.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\1. Update System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\UpdateObject.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\1. Update System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\Camera.cpp">
       <Filter>Source Files\Engine Code\Camera System</Filter>
@@ -136,13 +136,13 @@
       <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\DrawManager.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\SceneManager.cpp">
       <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\DrawObject.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
     </ClCompile>
     <ClCompile Include="Game Code\Player.cpp">
       <Filter>Source Files\Game Code</Filter>
@@ -160,10 +160,10 @@
       <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\InputObject.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\InputableAttorney.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\UpdateDeregistrationCommand.cpp">
       <Filter>Source Files\Engine Code\Commands\Update System</Filter>
@@ -184,17 +184,17 @@
       <Filter>Source Files\Engine Code\Commands\Input System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\InputManager.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\KeyListener.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClCompile>
     <ClCompile Include="Engine Code\DrawObjectAttorney.cpp">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine Code\TravellerEngine.h">
+    <ClInclude Include="Engine Code\TravelerEngine.h">
       <Filter>Source Files\Engine Code\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\TimeManager.h">
@@ -219,10 +219,10 @@
       <Filter>Source Files\Engine Code\Resource Managers\Texture Manager</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\UpdateObject.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\1. Update System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\UpdateManager.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\1. Update System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\1. Update System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\Scene.h">
       <Filter>Source Files\Engine Code\Scene System</Filter>
@@ -240,10 +240,10 @@
       <Filter>Source Files\Engine Code\Engine</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\DrawObject.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\DrawManager.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\RegistrationState.h">
       <Filter>Source Files\Engine Code\Misc.</Filter>
@@ -267,10 +267,10 @@
       <Filter>Source Files\Game Code\Weapons\Shotgun</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\InputObject.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\InputableAttorney.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\Command.h">
       <Filter>Source Files\Engine Code\Commands</Filter>
@@ -294,16 +294,16 @@
       <Filter>Source Files\Engine Code\Commands\Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\InputManager.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\KeyListener.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\KeyEvent.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\3. Input System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\3. Input System</Filter>
     </ClInclude>
     <ClInclude Include="Engine Code\DrawObjectAttorney.h">
-      <Filter>Source Files\Engine Code\GameObject + X-able System\2. Draw System</Filter>
+      <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

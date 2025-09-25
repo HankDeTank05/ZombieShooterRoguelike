@@ -1,31 +1,31 @@
-#include "../Engine Code/TravellerEngine.h"
+#include "../Engine Code/TravelerEngine.h"
 
-void TravellerEngine::EndGame()
+void TravelerEngine::EndGame()
 {
 	// GAME CODE GOES HERE TO END THE GAME
 }
 
-sf::RenderWindow* TravellerEngine::privGetCurrentWindow()
+sf::RenderWindow* TravelerEngine::privGetCurrentWindow()
 {
 	return &window;
 }
 
-unsigned int TravellerEngine::privGetScreenWidth()
+unsigned int TravelerEngine::privGetScreenWidth()
 {
 	return screenWidth;
 }
 
-unsigned int TravellerEngine::privGetScreenHeight()
+unsigned int TravelerEngine::privGetScreenHeight()
 {
 	return screenHeight;
 }
 
-void TravellerEngine::privSetClearColor(sf::Color color)
+void TravelerEngine::privSetClearColor(sf::Color color)
 {
 	clearColor = color;
 }
 
-void TravellerEngine::privSetWindowSize(unsigned int width, unsigned int height)
+void TravelerEngine::privSetWindowSize(unsigned int width, unsigned int height)
 {
 	screenWidth = width;
 	screenHeight = height;

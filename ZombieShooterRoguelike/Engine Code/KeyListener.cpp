@@ -10,6 +10,25 @@ KeyListener::KeyListener(sf::Keyboard::Key _keyToListenFor)
 	// do nothing
 }
 
+KeyListener::~KeyListener()
+{
+	for (NotifyList::iterator it = toNotifyOnPress.begin(); it != toNotifyOnPress.end(); it++)
+	{
+		if ((*it) != nullptr)
+		{
+			delete (*it);
+		}
+	}
+
+	for (NotifyList::iterator it = toNotifyOnRelease.begin(); it != toNotifyOnRelease.end(); it++)
+	{
+		if ((*it) != nullptr)
+		{
+			delete (*it);
+		}
+	}
+}
+
 KeyListener::NotifyListPos KeyListener::Register(KeyEvent eventToRegFor, InputObject* pInputable)
 {
 	NotifyListPos listPos;

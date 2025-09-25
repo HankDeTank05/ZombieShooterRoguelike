@@ -6,17 +6,17 @@
 
 #include <string>
 
-class TravellerEngine	// set up as singleton
+class TravelerEngine	// set up as singleton
 {
 private:
-	static TravellerEngine* pInstance;
+	static TravelerEngine* pInstance;
 
-	TravellerEngine();
-	TravellerEngine(const TravellerEngine& te) = delete;
-	TravellerEngine& operator=(const TravellerEngine& te) = delete;
-	virtual ~TravellerEngine();
+	TravelerEngine();
+	TravelerEngine(const TravelerEngine& te) = delete;
+	TravelerEngine& operator=(const TravelerEngine& te) = delete;
+	virtual ~TravelerEngine();
 
-	static TravellerEngine& Instance();
+	static TravelerEngine& Instance();
 
 private: // member variables
 	sf::RenderWindow window;

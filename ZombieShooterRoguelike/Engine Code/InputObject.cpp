@@ -13,6 +13,22 @@ InputObject::InputObject()
 	// do nothing
 }
 
+InputObject::~InputObject()
+{
+	for (KeyRegStateTracker::iterator it = keyRegStateTracker.begin(); it != keyRegStateTracker.end(); it++)
+	{
+		if ((*it).second.pDeregCmd != nullptr)
+		{
+			delete (*it).second.pDeregCmd;
+		}
+
+		if ((*it).second.pRegCmd != nullptr)
+		{
+			delete (*it).second.pRegCmd;
+		}
+	}
+}
+
 void InputObject::KeyPressed(sf::Keyboard::Key key)
 {
 	// do nothing

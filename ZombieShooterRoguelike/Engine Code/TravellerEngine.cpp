@@ -1,4 +1,4 @@
-#include "TravellerEngine.h"
+#include "TravelerEngine.h"
 
 #include "Variables.h"
 
@@ -8,9 +8,9 @@
 #include "SceneManager.h"
 #include "Scene.h"
 
-TravellerEngine* TravellerEngine::pInstance = nullptr;
+TravelerEngine* TravelerEngine::pInstance = nullptr;
 
-TravellerEngine::TravellerEngine()
+TravelerEngine::TravelerEngine()
 	: window(),
 	screenWidth(Defaults::ScreenWidth),
 	screenHeight(Defaults::ScreenHeight),
@@ -20,53 +20,53 @@ TravellerEngine::TravellerEngine()
 	// do nothing
 }
 
-TravellerEngine::~TravellerEngine()
+TravelerEngine::~TravelerEngine()
 {
 	// do nothing
 }
 
-TravellerEngine& TravellerEngine::Instance()
+TravelerEngine& TravelerEngine::Instance()
 {
 	if (pInstance == nullptr)
 	{
-		pInstance = new TravellerEngine();
+		pInstance = new TravelerEngine();
 	}
 	return *pInstance;
 }
 
-void TravellerEngine::Initialize()
+void TravelerEngine::Initialize()
 {
 	InitializeGame();
 }
 
-void TravellerEngine::LoadContent()
+void TravelerEngine::LoadContent()
 {
 	LoadAllResources();
 }
 
-void TravellerEngine::Update()
+void TravelerEngine::Update()
 {
 	TimeManagerAttorney::Engine::ProcessTime();
 
 	SceneManager::UpdateCurrentScene();
 }
 
-void TravellerEngine::Draw()
+void TravelerEngine::Draw()
 {
 	SceneManager::DrawCurrentScene();
 }
 
-void TravellerEngine::UnloadContent()
+void TravelerEngine::UnloadContent()
 {
 	SpriteManagerAttorney::Termination::Terminate();
 	TextureManagerAttorney::Termination::Terminate();
 }
 
-void TravellerEngine::privRun()
+void TravelerEngine::privRun()
 {
-	TravellerEngine::Initialize();
+	TravelerEngine::Initialize();
 
-	TravellerEngine::LoadContent();
+	TravelerEngine::LoadContent();
 
 	// create the window
 	window.create(sf::VideoMode(screenWidth, screenHeight), windowName);
@@ -88,52 +88,52 @@ void TravellerEngine::privRun()
 		// clear the window with black color
 		window.clear(clearColor);
 
-		TravellerEngine::Update();
-		TravellerEngine::Draw();
+		TravelerEngine::Update();
+		TravelerEngine::Draw();
 
 		// end the current frame
 		window.display();
 	}
 
-	TravellerEngine::UnloadContent();
+	TravelerEngine::UnloadContent();
 }
 
-void TravellerEngine::privTerminate()
+void TravelerEngine::privTerminate()
 {
 	window.close();
 }
 
-sf::RenderWindow* TravellerEngine::GetCurrentWindow()
+sf::RenderWindow* TravelerEngine::GetCurrentWindow()
 {
 	return Instance().privGetCurrentWindow();
 }
 
-unsigned int TravellerEngine::GetScreenWidth()
+unsigned int TravelerEngine::GetScreenWidth()
 {
 	return Instance().privGetScreenWidth();
 }
 
-unsigned int TravellerEngine::GetScreenHeight()
+unsigned int TravelerEngine::GetScreenHeight()
 {
 	return Instance().privGetScreenHeight();
 }
 
-void TravellerEngine::SetClearColor(sf::Color color)
+void TravelerEngine::SetClearColor(sf::Color color)
 {
 	Instance().privSetClearColor(color);
 }
 
-void TravellerEngine::SetWindowSize(unsigned int width, unsigned int height)
+void TravelerEngine::SetWindowSize(unsigned int width, unsigned int height)
 {
 	Instance().privSetWindowSize(width, height);
 }
 
-void TravellerEngine::Run()
+void TravelerEngine::Run()
 {
 	Instance().privRun();
 }
 
-void TravellerEngine::Terminate()
+void TravelerEngine::Terminate()
 {
 	Instance().privTerminate();
 

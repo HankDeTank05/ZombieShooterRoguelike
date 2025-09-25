@@ -1,4 +1,4 @@
-#include "../Engine Code/TravellerEngine.h"
+#include "../Engine Code/TravelerEngine.h"
 
 #include "../Engine Code/TextureManager.h"
 #include "../Engine Code/SpriteManager.h"
@@ -6,7 +6,7 @@
 
 #include "ScenePlayerTest.h"
 
-void TravellerEngine::LoadAllResources()
+void TravelerEngine::LoadAllResources()
 {
 	TextureManager::LoadTexure("tds.png", "spritesheet");
 

@@ -1,8 +1,8 @@
 #include "EngineAttorney.h"
 
-#include "TravellerEngine.h"
+#include "TravelerEngine.h"
 
 sf::RenderWindow* EngineAttorney::Rendering::GetCurrentWindow()
 {
-	return TravellerEngine::GetCurrentWindow();
+	return TravelerEngine::GetCurrentWindow();
 }

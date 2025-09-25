@@ -76,7 +76,7 @@
     <ClInclude Include="Engine Code\TextureManagerAttorney.h" />
     <ClInclude Include="Engine Code\TimeManager.h" />
     <ClInclude Include="Engine Code\TimeManagerAttorney.h" />
-    <ClInclude Include="Engine Code\TravellerEngine.h" />
+    <ClInclude Include="Engine Code\TravelerEngine.h" />
     <ClInclude Include="Engine Code\UpdateObject.h" />
     <ClInclude Include="Engine Code\UpdateManager.h" />
     <ClInclude Include="Engine Code\UpdateDeregistrationCommand.h" />
