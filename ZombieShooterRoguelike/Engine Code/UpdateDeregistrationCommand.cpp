@@ -1,8 +1,8 @@
 #include "UpdateDeregistrationCommand.h"
 
-#include "Updatable.h"
+#include "UpdateObject.h"
 
-UpdateDeregistrationCommand::UpdateDeregistrationCommand(Updatable* _pUpdatable)
+UpdateDeregistrationCommand::UpdateDeregistrationCommand(UpdateObject* _pUpdatable)
 	: pUpdatable(_pUpdatable)
 {
 	// do nothing

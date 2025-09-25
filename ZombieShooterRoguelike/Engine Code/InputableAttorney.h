@@ -6,7 +6,7 @@
 #include "KeyEvent.h"
 
 // forward declarations
-class Inputable;
+class InputObject;
 
 class InputableAttorney
 {
@@ -17,8 +17,8 @@ public:
 	private:
 		friend class InputRegistrationCommand;
 		friend class InputDeregistrationCommand;
-		static void RegisterForInputReading(Inputable* pInputable, sf::Keyboard::Key key, KeyEvent eventToRegFor);
-		static void DeregisterForInputReading(Inputable* pInputable, sf::Keyboard::Key key, KeyEvent eventToDeregFor);
+		static void RegisterForInputReading(InputObject* pInputable, sf::Keyboard::Key key, KeyEvent eventToRegFor);
+		static void DeregisterForInputReading(InputObject* pInputable, sf::Keyboard::Key key, KeyEvent eventToDeregFor);
 	};
 };
 

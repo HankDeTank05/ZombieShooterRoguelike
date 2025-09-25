@@ -9,7 +9,7 @@ public:
 	class Rendering
 	{
 	private:
-		friend class TDrawableManager;
+		friend class DrawManager;
 		static sf::RenderWindow* GetCurrentWindow();
 	};
 };

@@ -2,7 +2,7 @@
 
 #include "InputableAttorney.h"
 
-InputDeregistrationCommand::InputDeregistrationCommand(Inputable* _pInputable, sf::Keyboard::Key _key, KeyEvent _eventToDeregFor)
+InputDeregistrationCommand::InputDeregistrationCommand(InputObject* _pInputable, sf::Keyboard::Key _key, KeyEvent _eventToDeregFor)
 	: pInputable(_pInputable),
 	key(_key),
 	eventToDeregFor(_eventToDeregFor)

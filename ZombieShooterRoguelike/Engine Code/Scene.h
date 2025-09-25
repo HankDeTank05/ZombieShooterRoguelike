@@ -1,17 +1,17 @@
 #ifndef SCENE_H
 #define SCENE_H
 
-#include "UpdatableManager.h"
-#include "TDrawableManager.h"
+#include "UpdateManager.h"
+#include "DrawManager.h"
 #include "KeyListener.h"
-#include "InputableManager.h"
+#include "InputManager.h"
 
 // forward declarations
 class RegistrationBroker;
 class CameraManager;
 class Command;
-class Updatable;
-class TDrawable;
+class UpdateObject;
+class DrawObject;
 
 class Scene
 {
@@ -29,21 +29,21 @@ public:
 public:
 	void EnqueueCommand(Command* pCommand);
 
-	UpdatableManager::UpdateListPos Register(Updatable* pUpdatable);
-	void Deregister(UpdatableManager::UpdateListPos updateRef);
+	UpdateManager::UpdateListPos Register(UpdateObject* pUpdatable);
+	void Deregister(UpdateManager::UpdateListPos updateRef);
 
-	TDrawableManager::DrawListPos Register(TDrawable* pDrawable);
-	void Deregister(TDrawableManager::DrawListPos drawRef);
+	DrawManager::DrawListPos Register(DrawObject* pDrawable);
+	void Deregister(DrawManager::DrawListPos drawRef);
 
-	KeyListener::NotifyListPos Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, Inputable* pInputable);
+	KeyListener::NotifyListPos Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, InputObject* pInputable);
 	void Deregister(sf::Keyboard::Key key, KeyEvent eventToDeregFor, KeyListener::NotifyListPos inputRef);
 
 private:
 	RegistrationBroker* pRegBroker;
 
-	UpdatableManager* pUpMgr;
-	TDrawableManager* pDrawMgr;
-	InputableManager* pInMgr;
+	UpdateManager* pUpMgr;
+	DrawManager* pDrawMgr;
+	InputManager* pInMgr;
 
 	CameraManager* pCamMgr;
 };

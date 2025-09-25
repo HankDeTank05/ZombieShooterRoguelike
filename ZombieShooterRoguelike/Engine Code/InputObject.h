@@ -1,5 +1,5 @@
-#ifndef INPUTABLE_H
-#define INPUTABLE_H
+#ifndef INPUT_OBJECT_H
+#define INPUT_OBJECT_H
 
 #include <map>
 
@@ -13,13 +13,13 @@
 class InputRegistrationCommand;
 class InputDeregistrationCommand;
 
-class Inputable
+class InputObject
 {
 public:
-	Inputable();
-	Inputable(const Inputable& i) = delete;
-	Inputable& operator=(const Inputable& i) = delete;
-	virtual ~Inputable();
+	InputObject();
+	InputObject(const InputObject& i) = delete;
+	InputObject& operator=(const InputObject& i) = delete;
+	virtual ~InputObject();
 
 protected:
 	virtual void KeyPressed(sf::Keyboard::Key key);

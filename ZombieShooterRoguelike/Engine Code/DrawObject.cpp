@@ -1,46 +1,28 @@
-#include "Updatable.h"
+#include "DrawObject.h"
 
 #include <cassert>
 
-#include "UpdateRegistrationCommand.h"
-#include "UpdateDeregistrationCommand.h"
+#include "TDrawRegistrationCommand.h"
+#include "TDrawDeregistrationCommand.h"
 #include "SceneManager.h"
 #include "Scene.h"
 
-Updatable::Updatable()
+DrawObject::DrawObject()
 	: regState(RegistrationState::CurrentlyDeregistered),
-	pRegCmd(new UpdateRegistrationCommand(this)),
-	pDeregCmd(new UpdateDeregistrationCommand(this)),
+	pRegCmd(new TDrawRegistrationCommand(this)),
+	pDeregCmd(new TDrawDeregistrationCommand(this)),
 	deleteRef()
 {
 	// do nothing
 }
 
-Updatable::Updatable(const Updatable& u)
-	: regState(u.regState),
-	pRegCmd(new UpdateRegistrationCommand(*u.pRegCmd)),
-	pDeregCmd(new UpdateDeregistrationCommand(*u.pDeregCmd)),
-	deleteRef()
-{
-	// do nothing
-}
-
-Updatable& Updatable::operator=(const Updatable& u)
-{
-	regState = u.regState;
-	pRegCmd = new UpdateRegistrationCommand(*u.pRegCmd);
-	pDeregCmd = new UpdateDeregistrationCommand(*u.pDeregCmd);
-
-	return *this;
-}
-
-Updatable::~Updatable()
+DrawObject::~DrawObject()
 {
 	delete pDeregCmd;
 	delete pRegCmd;
 }
 
-void Updatable::EnqueueForUpdateRegistration()
+void DrawObject::EnqueueForDrawRegistration()
 {
 	assert(regState == RegistrationState::CurrentlyDeregistered);
 
@@ -49,7 +31,7 @@ void Updatable::EnqueueForUpdateRegistration()
 	regState = RegistrationState::PendingRegistration;
 }
 
-void Updatable::EnqueueForUpdateDeregistration()
+void DrawObject::EnqueueForDrawDeregistration()
 {
 	assert(regState == RegistrationState::CurrentlyRegistered);
 
@@ -58,7 +40,7 @@ void Updatable::EnqueueForUpdateDeregistration()
 	regState = RegistrationState::PendingDeregistration;
 }
 
-void Updatable::RegisterForUpdate()
+void DrawObject::RegisterForDraw()
 {
 	assert(regState == RegistrationState::PendingRegistration);
 
@@ -67,7 +49,7 @@ void Updatable::RegisterForUpdate()
 	regState = RegistrationState::CurrentlyRegistered;
 }
 
-void Updatable::DeregisterForUpdate()
+void DrawObject::DeregisterForDraw()
 {
 	assert(regState == RegistrationState::PendingDeregistration);
 

@@ -1,15 +1,15 @@
-#include "InputableManager.h"
+#include "InputManager.h"
 
 #include "KeyListener.h"
 #include <cassert>
 
-InputableManager::InputableManager()
+InputManager::InputManager()
 	: keyTracker()
 {
 	// do nothing
 }
 
-KeyListener::NotifyListPos InputableManager::Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, Inputable* pInputable)
+KeyListener::NotifyListPos InputManager::Register(sf::Keyboard::Key key, KeyEvent eventToRegFor, InputObject* pInputable)
 {
 	if (keyTracker.count(key) == 0)
 	{
@@ -19,7 +19,7 @@ KeyListener::NotifyListPos InputableManager::Register(sf::Keyboard::Key key, Key
 	return keyTracker[key]->Register(eventToRegFor, pInputable);
 }
 
-void InputableManager::Deregister(sf::Keyboard::Key key, KeyEvent eventToDeregFor, KeyListener::NotifyListPos listPos)
+void InputManager::Deregister(sf::Keyboard::Key key, KeyEvent eventToDeregFor, KeyListener::NotifyListPos listPos)
 {
 	assert(keyTracker.count(key) > 0);
 

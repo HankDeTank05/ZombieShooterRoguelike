@@ -3,13 +3,13 @@
 
 #include "SFML/Graphics/Sprite.hpp"
 
-#include "../Engine Code/Updatable.h"
-#include "../Engine Code/TDrawable.h"
+#include "../Engine Code/UpdateObject.h"
+#include "../Engine Code/DrawObject.h"
 
 // forward declarations
 class Weapon;
 
-class Player : public Updatable, public TDrawable
+class Player : public UpdateObject, public DrawObject
 {
 public:
 	Player();

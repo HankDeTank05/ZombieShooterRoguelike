@@ -7,13 +7,13 @@
 #include "KeyEvent.h"
 
 // forward declarations
-class Inputable;
+class InputObject;
 
 class InputDeregistrationCommand : public Command
 {
 public:
 	InputDeregistrationCommand() = delete;
-	InputDeregistrationCommand(Inputable* pInputable, sf::Keyboard::Key key, KeyEvent eventToDeregFor);
+	InputDeregistrationCommand(InputObject* pInputable, sf::Keyboard::Key key, KeyEvent eventToDeregFor);
 	InputDeregistrationCommand(const InputDeregistrationCommand& idc) = delete;
 	InputDeregistrationCommand& operator=(const InputDeregistrationCommand& idc) = delete;
 	virtual ~InputDeregistrationCommand();
@@ -21,7 +21,7 @@ public:
 	virtual void Execute() override;
 
 private:
-	Inputable* pInputable;
+	InputObject* pInputable;
 	sf::Keyboard::Key key;
 	KeyEvent eventToDeregFor;
 };

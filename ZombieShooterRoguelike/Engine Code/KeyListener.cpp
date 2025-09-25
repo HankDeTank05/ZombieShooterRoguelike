@@ -10,7 +10,7 @@ KeyListener::KeyListener(sf::Keyboard::Key _keyToListenFor)
 	// do nothing
 }
 
-KeyListener::NotifyListPos KeyListener::Register(KeyEvent eventToRegFor, Inputable* pInputable)
+KeyListener::NotifyListPos KeyListener::Register(KeyEvent eventToRegFor, InputObject* pInputable)
 {
 	NotifyListPos listPos;
 

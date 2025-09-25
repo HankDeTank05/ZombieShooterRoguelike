@@ -1,4 +1,4 @@
-#include "Inputable.h"
+#include "InputObject.h"
 
 #include <cassert>
 
@@ -7,23 +7,23 @@
 #include "SceneManager.h"
 #include "Scene.h"
 
-Inputable::Inputable()
+InputObject::InputObject()
 	: keyRegStateTracker()
 {
 	// do nothing
 }
 
-void Inputable::KeyPressed(sf::Keyboard::Key key)
+void InputObject::KeyPressed(sf::Keyboard::Key key)
 {
 	// do nothing
 }
 
-void Inputable::KeyReleased(sf::Keyboard::Key key)
+void InputObject::KeyReleased(sf::Keyboard::Key key)
 {
 	// do nothing
 }
 
-void Inputable::EnqueueForInputRegistration(sf::Keyboard::Key key, KeyEvent eventToRegFor)
+void InputObject::EnqueueForInputRegistration(sf::Keyboard::Key key, KeyEvent eventToRegFor)
 {
 	KeyTrackerID keyID = KeyTrackerID(key, eventToRegFor);
 
@@ -46,7 +46,7 @@ void Inputable::EnqueueForInputRegistration(sf::Keyboard::Key key, KeyEvent even
 	keyRegStateTracker[keyID].regState = RegistrationState::PendingRegistration;
 }
 
-void Inputable::EnqueueForInputDeregistration(sf::Keyboard::Key key, KeyEvent eventToDeregFor)
+void InputObject::EnqueueForInputDeregistration(sf::Keyboard::Key key, KeyEvent eventToDeregFor)
 {
 	KeyTrackerID keyID = KeyTrackerID(key, eventToDeregFor);
 
@@ -60,12 +60,12 @@ void Inputable::EnqueueForInputDeregistration(sf::Keyboard::Key key, KeyEvent ev
 	keyRegStateTracker[keyID].regState = RegistrationState::PendingDeregistration;
 }
 
-void Inputable::RegisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToRegFor)
+void InputObject::RegisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToRegFor)
 {
 	SceneManager::GetCurrentScene()->Register(key, eventToRegFor, this);
 }
 
-void Inputable::DeregisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToDeregFor)
+void InputObject::DeregisterForInputReading(sf::Keyboard::Key key, KeyEvent eventToDeregFor)
 {
 	// get the listPos for deregistration
 	KeyTrackerID keyID = KeyTrackerID(key, eventToDeregFor);

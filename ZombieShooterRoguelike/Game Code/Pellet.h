@@ -4,10 +4,10 @@
 #include "SFML/System/Vector2.hpp"
 #include "SFML/Graphics/Sprite.hpp"
 
-#include "../Engine Code/Updatable.h"
-#include "../Engine Code/TDrawable.h"
+#include "../Engine Code/UpdateObject.h"
+#include "../Engine Code/DrawObject.h"
 
-class Pellet : public Updatable, public TDrawable
+class Pellet : public UpdateObject, public DrawObject
 {
 public:
 	Pellet() = delete;

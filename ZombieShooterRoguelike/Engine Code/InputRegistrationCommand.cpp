@@ -2,7 +2,7 @@
 
 #include "InputableAttorney.h"
 
-InputRegistrationCommand::InputRegistrationCommand(Inputable* _pInputable, sf::Keyboard::Key _key, KeyEvent _eventToRegFor)
+InputRegistrationCommand::InputRegistrationCommand(InputObject* _pInputable, sf::Keyboard::Key _key, KeyEvent _eventToRegFor)
 	: pInputable(_pInputable),
 	key(_key),
 	eventToRegFor(_eventToRegFor)

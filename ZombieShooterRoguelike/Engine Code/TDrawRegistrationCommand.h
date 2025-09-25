@@ -4,13 +4,13 @@
 #include "Command.h"
 
 // forward declarations
-class TDrawable;
+class DrawObject;
 
 class TDrawRegistrationCommand : public Command
 {
 public:
 	TDrawRegistrationCommand() = delete;
-	TDrawRegistrationCommand(TDrawable* pDrawable);
+	TDrawRegistrationCommand(DrawObject* pDrawable);
 	TDrawRegistrationCommand(const TDrawRegistrationCommand& drc);
 	TDrawRegistrationCommand& operator=(const TDrawRegistrationCommand& drc);
 	virtual ~TDrawRegistrationCommand();
@@ -18,7 +18,7 @@ public:
 	virtual void Execute() override;
 
 private:
-	TDrawable* pDrawable;
+	DrawObject* pDrawable;
 };
 
 #endif

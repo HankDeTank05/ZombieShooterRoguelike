@@ -1,8 +1,8 @@
 #include "UpdateRegistrationCommand.h"
 
-#include "Updatable.h"
+#include "UpdateObject.h"
 
-UpdateRegistrationCommand::UpdateRegistrationCommand(Updatable* _pUpdatable)
+UpdateRegistrationCommand::UpdateRegistrationCommand(UpdateObject* _pUpdatable)
 	: pUpdatable(_pUpdatable)
 {
 	// do nothing

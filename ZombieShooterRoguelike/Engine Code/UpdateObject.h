@@ -1,20 +1,20 @@
-#ifndef UPDATABLE_H
-#define UPDATABLE_H
+#ifndef UPDATE_OBJECT_H
+#define UPDATE_OBJECT_H
 
 #include "RegistrationState.h"
-#include "UpdatableManager.h"
+#include "UpdateManager.h"
 
 // forward declarations
 class UpdateRegistrationCommand;
 class UpdateDeregistrationCommand;
 
-class Updatable
+class UpdateObject
 {
 public:
-	Updatable();
-	Updatable(const Updatable& u);
-	Updatable& operator=(const Updatable& u);
-	virtual ~Updatable();
+	UpdateObject();
+	UpdateObject(const UpdateObject& u);
+	UpdateObject& operator=(const UpdateObject& u);
+	virtual ~UpdateObject();
 
 	virtual void Update() = 0;
 	
@@ -30,7 +30,7 @@ private:
 	RegistrationState regState;
 	UpdateRegistrationCommand* pRegCmd;
 	UpdateDeregistrationCommand* pDeregCmd;
-	UpdatableManager::UpdateListPos deleteRef;
+	UpdateManager::UpdateListPos deleteRef;
 };
 
 #endif

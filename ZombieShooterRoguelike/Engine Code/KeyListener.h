@@ -8,7 +8,7 @@
 #include "KeyEvent.h"
 
 // forward declarations
-class Inputable;
+class InputObject;
 
 class KeyListener
 {
@@ -20,13 +20,13 @@ public:
 	virtual ~KeyListener();
 
 private:
-	using NotifyList = std::list<Inputable*>;
+	using NotifyList = std::list<InputObject*>;
 
 public:
 	using NotifyListPos = NotifyList::iterator;
 
 public:
-	NotifyListPos Register(KeyEvent eventToRegFor, Inputable* pInputable);
+	NotifyListPos Register(KeyEvent eventToRegFor, InputObject* pInputable);
 	void Deregister(KeyEvent eventToDeregFor, NotifyListPos listPos);
 
 private:
