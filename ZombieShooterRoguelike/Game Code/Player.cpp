@@ -28,7 +28,7 @@ Player::Player()
 
 Player::~Player()
 {
-	// TODO
+	delete pWeapon;
 }
 
 void Player::Update()

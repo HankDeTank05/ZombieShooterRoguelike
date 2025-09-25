@@ -1,9 +1,11 @@
 #include "../Engine Code/TravelerEngine.h"
 
+// (other) engine includes
 #include "../Engine Code/TextureManager.h"
 #include "../Engine Code/SpriteManager.h"
 #include "../Engine Code/SceneManager.h"
 
+// game includes
 #include "ScenePlayerTest.h"
 
 void TravelerEngine::LoadAllResources()
@@ -23,5 +25,5 @@ void TravelerEngine::LoadAllResources()
 	SpriteManager::LoadSprite("spritesheet", "pellet", sf::IntRect(0, 8, 8, 8));
 
 	SceneManager::SetStartScene(new ScenePlayerTest());
-	SceneManager::InitStartScene();
+	SceneManager::InitStartScene(); // TODO: this should not be in user code. move this to engine code (see other todos for where to move to)
 }

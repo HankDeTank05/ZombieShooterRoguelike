@@ -22,9 +22,15 @@
     <ClCompile Include="Engine Code\DrawObject.cpp" />
     <ClCompile Include="Engine Code\DrawObjectAttorney.cpp" />
     <ClCompile Include="Engine Code\DrawManager.cpp" />
+    <ClCompile Include="Engine Code\SceneManagerAttorney.cpp" />
     <ClCompile Include="Engine Code\TDrawDeregistrationCommand.cpp" />
     <ClCompile Include="Engine Code\TDrawRegistrationCommand.cpp" />
-    <ClCompile Include="Engine Code\EngineAttorney.cpp" />
+    <ClCompile Include="Engine Code\EngineAttorney.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="Engine Code\main.cpp" />
     <ClCompile Include="Engine Code\RegistrationBroker.cpp" />
     <ClCompile Include="Engine Code\Scene.cpp" />
@@ -35,7 +41,7 @@
     <ClCompile Include="Engine Code\TextureManagerAttorney.cpp" />
     <ClCompile Include="Engine Code\TimeManager.cpp" />
     <ClCompile Include="Engine Code\TimeManagerAttorney.cpp" />
-    <ClCompile Include="Engine Code\TravellerEngine.cpp" />
+    <ClCompile Include="Engine Code\TravelerEngine.cpp" />
     <ClCompile Include="Engine Code\UpdateObject.cpp" />
     <ClCompile Include="Engine Code\UpdateManager.cpp" />
     <ClCompile Include="Engine Code\UpdateDeregistrationCommand.cpp" />
@@ -63,6 +69,9 @@
     <ClInclude Include="Engine Code\DrawObject.h" />
     <ClInclude Include="Engine Code\DrawObjectAttorney.h" />
     <ClInclude Include="Engine Code\DrawManager.h" />
+    <ClInclude Include="Engine Code\MemTracker\Framework.h" />
+    <ClInclude Include="Engine Code\MemTracker\ProjectSettings.h" />
+    <ClInclude Include="Engine Code\SceneManagerAttorney.h" />
     <ClInclude Include="Engine Code\TDrawDeregistrationCommand.h" />
     <ClInclude Include="Engine Code\TDrawRegistrationCommand.h" />
     <ClInclude Include="Engine Code\EngineAttorney.h" />
@@ -100,14 +109,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -131,9 +140,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";_DEBUG;_CONSOLE;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>"$(SolutionDir)/ZombieShooterRoguelike/Engine Code/MemTracker/Framework.h"</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,9 +158,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SFML_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";NDEBUG;_CONSOLE;WINDOWS_TARGET_PLATFORM="$(TargetPlatformVersion)";MEMORY_LOGS_DIR=R"($(SolutionDir))";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>"$(SolutionDir)/ZombieShooterRoguelike/Engine Code/MemTracker/Framework.h"</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

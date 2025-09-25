@@ -9,6 +9,12 @@ public:
 		friend class TravelerEngine;
 		static void ProcessTime();
 	};
+
+	class Termination
+	{
+		friend class TravelerEngine;
+		static void Terminate();
+	};
 };
 
 #endif

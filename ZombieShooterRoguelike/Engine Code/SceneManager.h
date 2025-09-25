@@ -38,6 +38,8 @@ public: // API functions (static)
 	static void UpdateCurrentScene();
 	static void DrawCurrentScene();
 
+private: // internal-only api functions
+	friend class SceneManagerAttorney;
 	static void Terminate();
 	
 };

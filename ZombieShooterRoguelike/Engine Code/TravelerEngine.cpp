@@ -5,7 +5,7 @@
 #include "TimeManagerAttorney.h"
 #include "SpriteManagerAttorney.h"
 #include "TextureManagerAttorney.h"
-#include "SceneManager.h"
+#include "SceneManagerAttorney.h"
 #include "Scene.h"
 
 TravelerEngine* TravelerEngine::pInstance = nullptr;
@@ -22,7 +22,7 @@ TravelerEngine::TravelerEngine()
 
 TravelerEngine::~TravelerEngine()
 {
-	// do nothing
+	window.close();
 }
 
 TravelerEngine& TravelerEngine::Instance()
@@ -36,35 +36,80 @@ TravelerEngine& TravelerEngine::Instance()
 
 void TravelerEngine::Initialize()
 {
-	InitializeGame();
+	// TODO: initialize the engine here (one-time non-graphic creation)
 }
 
 void TravelerEngine::LoadContent()
 {
 	LoadAllResources();
+
+	// TODO: initialize the starting scene here! (do it through attorney)
 }
 
 void TravelerEngine::Update()
 {
 	TimeManagerAttorney::Engine::ProcessTime();
 
-	SceneManager::UpdateCurrentScene();
+	SceneManager::UpdateCurrentScene(); // TODO: make this go through attorney
 }
 
 void TravelerEngine::Draw()
 {
-	SceneManager::DrawCurrentScene();
+	SceneManager::DrawCurrentScene(); // TODO: make this go through attorney
 }
 
 void TravelerEngine::UnloadContent()
 {
+	// terminate all engine systems
 	SpriteManagerAttorney::Termination::Terminate();
 	TextureManagerAttorney::Termination::Terminate();
+	TimeManagerAttorney::Termination::Terminate();
+	SceneManagerAttorney::Termination::Terminate();
+}
+
+sf::RenderWindow* TravelerEngine::privGetCurrentWindow()
+{
+	return &window;
+}
+
+unsigned int TravelerEngine::privGetScreenWidth()
+{
+	return screenWidth;
+}
+
+unsigned int TravelerEngine::privGetScreenHeight()
+{
+	return screenHeight;
+}
+
+std::string TravelerEngine::privGetWindowName()
+{
+	return windowName;
+}
+
+void TravelerEngine::privSetClearColor(sf::Color color)
+{
+	clearColor = color;
+}
+
+void TravelerEngine::privSetWindowSize(unsigned int width, unsigned int height)
+{
+	screenWidth = width;
+	screenHeight = height;
+	window.setSize(sf::Vector2u(screenWidth, screenHeight));
+}
+
+void TravelerEngine::privSetWindowName(std::string name)
+{
+	windowName = name;
+	window.setTitle(windowName);
 }
 
 void TravelerEngine::privRun()
 {
 	TravelerEngine::Initialize();
+
+	TravelerEngine::InitializeGame();
 
 	TravelerEngine::LoadContent();
 
@@ -98,11 +143,6 @@ void TravelerEngine::privRun()
 	TravelerEngine::UnloadContent();
 }
 
-void TravelerEngine::privTerminate()
-{
-	window.close();
-}
-
 sf::RenderWindow* TravelerEngine::GetCurrentWindow()
 {
 	return Instance().privGetCurrentWindow();
@@ -118,6 +158,11 @@ unsigned int TravelerEngine::GetScreenHeight()
 	return Instance().privGetScreenHeight();
 }
 
+std::string TravelerEngine::GetWindowName()
+{
+	return Instance().privGetWindowName();
+}
+
 void TravelerEngine::SetClearColor(sf::Color color)
 {
 	Instance().privSetClearColor(color);
@@ -126,6 +171,11 @@ void TravelerEngine::SetClearColor(sf::Color color)
 void TravelerEngine::SetWindowSize(unsigned int width, unsigned int height)
 {
 	Instance().privSetWindowSize(width, height);
+}
+
+void TravelerEngine::SetWindowName(std::string name)
+{
+	Instance().privSetWindowName(name);
 }
 
 void TravelerEngine::Run()

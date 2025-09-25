@@ -1,5 +1,10 @@
 #include "KeyListener.h"
+
+// language includes
 #include <cassert>
+
+// engine includes
+#include "InputObject.h"
 
 KeyListener::KeyListener(sf::Keyboard::Key _keyToListenFor)
 	: keyToListenFor(_keyToListenFor),

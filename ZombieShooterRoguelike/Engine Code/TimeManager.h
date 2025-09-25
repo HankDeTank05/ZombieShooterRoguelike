@@ -1,6 +1,7 @@
 #ifndef TIME_MANAGER_H
 #define TIME_MANAGER_H
 
+// library includes
 #include <SFML/System/Clock.hpp>
 #include <SFML/System/Time.hpp>
 
@@ -26,8 +27,6 @@ private: // private functions
 	void privProcessTime();
 	float privGetCurrentTime();
 	float privGetFrameTime();
-
-	void privTerminate();
 
 private: // engine/internal API functions (static)
 	friend class TimeManagerAttorney;

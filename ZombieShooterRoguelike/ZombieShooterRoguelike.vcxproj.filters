@@ -79,6 +79,9 @@
     <Filter Include="Source Files\Engine Code\GameObject + X-Object System\3. Input System">
       <UniqueIdentifier>{205a39f2-8d3a-4528-af6d-00e3fe9799bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine Code\Engine\MemTracker">
+      <UniqueIdentifier>{fbb7a0c7-9d5b-4cc5-bcfc-db659db5f478}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine Code\main.cpp">
@@ -87,7 +90,7 @@
     <ClCompile Include="Engine Code\TimeManager.cpp">
       <Filter>Source Files\Engine Code\Time Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Engine Code\TravellerEngine.cpp">
+    <ClCompile Include="Engine Code\TravelerEngine.cpp">
       <Filter>Source Files\Engine Code\Engine</Filter>
     </ClCompile>
     <ClCompile Include="Game Code\LoadAllResources.cpp">
@@ -191,6 +194,9 @@
     </ClCompile>
     <ClCompile Include="Engine Code\DrawObjectAttorney.cpp">
       <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine Code\SceneManagerAttorney.cpp">
+      <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -304,6 +310,15 @@
     </ClInclude>
     <ClInclude Include="Engine Code\DrawObjectAttorney.h">
       <Filter>Source Files\Engine Code\GameObject + X-Object System\2. Draw System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\MemTracker\Framework.h">
+      <Filter>Source Files\Engine Code\Engine\MemTracker</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\MemTracker\ProjectSettings.h">
+      <Filter>Source Files\Engine Code\Engine\MemTracker</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine Code\SceneManagerAttorney.h">
+      <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

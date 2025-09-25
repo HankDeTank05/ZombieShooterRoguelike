@@ -42,11 +42,12 @@ private: // private functions
 
 	unsigned int privGetScreenWidth();
 	unsigned int privGetScreenHeight();
+	std::string privGetWindowName();
 	void privSetClearColor(sf::Color color);
 	void privSetWindowSize(unsigned int width, unsigned int height);
+	void privSetWindowName(std::string name);
 
 	void privRun();
-	void privTerminate();
 
 private: // engine/internal API functions (static)
 	friend class EngineAttorney;
@@ -55,8 +56,10 @@ private: // engine/internal API functions (static)
 public: // public API functions (static)
 	static unsigned int GetScreenWidth();
 	static unsigned int GetScreenHeight();
+	static std::string GetWindowName();
 	static void SetClearColor(sf::Color color);
 	static void SetWindowSize(unsigned int width, unsigned int height);
+	static void SetWindowName(std::string name);
 
 	static void Run();
 	static void Terminate();

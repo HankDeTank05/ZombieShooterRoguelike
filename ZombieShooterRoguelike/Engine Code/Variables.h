@@ -7,8 +7,8 @@
 namespace Defaults
 {
 	// engine defaults
-	const unsigned int ScreenWidth = 1280;
-	const unsigned int ScreenHeight = 720;
+	const unsigned int ScreenWidth = 128;
+	const unsigned int ScreenHeight = 128;
 	const std::string WindowName = "Traveller Engine";
 	const sf::Color ClearColor = sf::Color::Black;
 

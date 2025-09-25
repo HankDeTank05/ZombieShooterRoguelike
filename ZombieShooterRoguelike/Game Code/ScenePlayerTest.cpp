@@ -23,5 +23,5 @@ void ScenePlayerTest::Initialize()
 
 void ScenePlayerTest::SceneEnd()
 {
-	// CODE GOES HERE
+	// TODO: code goes here
 }

@@ -44,11 +44,6 @@ float TimeManager::privGetFrameTime()
 	return frameTime.asSeconds();
 }
 
-void TimeManager::privTerminate()
-{
-	// do nothing
-}
-
 void TimeManager::ProcessTime()
 {
 	Instance().privProcessTime();
@@ -66,8 +61,6 @@ float TimeManager::GetFrameTime()
 
 void TimeManager::Terminate()
 {
-	Instance().privTerminate();
-
 	delete pInstance;
 	pInstance = nullptr;
 }
