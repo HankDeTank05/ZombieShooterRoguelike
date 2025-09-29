@@ -43,19 +43,19 @@ void TravelerEngine::LoadContent()
 {
 	LoadAllResources();
 
-	// TODO: initialize the starting scene here! (do it through attorney)
+	SceneManagerAttorney::EngineAccess::InitStartScene(); 
 }
 
 void TravelerEngine::Update()
 {
 	TimeManagerAttorney::Engine::ProcessTime();
 
-	SceneManager::UpdateCurrentScene(); // TODO: make this go through attorney
+	SceneManagerAttorney::EngineAccess::UpdateCurrentScene();
 }
 
 void TravelerEngine::Draw()
 {
-	SceneManager::DrawCurrentScene(); // TODO: make this go through attorney
+	SceneManagerAttorney::EngineAccess::DrawCurrentScene();
 }
 
 void TravelerEngine::UnloadContent()
@@ -185,8 +185,6 @@ void TravelerEngine::Run()
 
 void TravelerEngine::Terminate()
 {
-	Instance().privTerminate();
-
 	delete pInstance;
 	pInstance = nullptr;
 }

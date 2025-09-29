@@ -16,13 +16,14 @@ public:
 	Pellet& operator=(const Pellet& p) = delete;
 	virtual ~Pellet();
 
-	virtual void Update() override;
-	virtual void draw(sf::RenderTarget& rTarget, sf::RenderStates states) const override;
+	virtual void Update(float frameTime) override;
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 private:
 	sf::Sprite* pSprite;
 	sf::Vector2f pos;
 	sf::Vector2f dir;
+	// TODO: add speed member variable
 };
 
 #endif

@@ -198,6 +198,9 @@
     <ClCompile Include="Engine Code\SceneManagerAttorney.cpp">
       <Filter>Source Files\Engine Code\Scene System</Filter>
     </ClCompile>
+    <ClCompile Include="Game Code\Crosshair.cpp">
+      <Filter>Source Files\Game Code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine Code\TravelerEngine.h">
@@ -319,6 +322,9 @@
     </ClInclude>
     <ClInclude Include="Engine Code\SceneManagerAttorney.h">
       <Filter>Source Files\Engine Code\Scene System</Filter>
+    </ClInclude>
+    <ClInclude Include="Game Code\Crosshair.h">
+      <Filter>Source Files\Game Code</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

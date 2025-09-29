@@ -31,9 +31,10 @@ Player::~Player()
 	delete pWeapon;
 }
 
-void Player::Update()
+void Player::Update(float frameTime)
 {
 	posDelta = sf::Vector2f(0.0f, 0.0f);
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) MoveNorth();
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) MoveWest();
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) MoveSouth();
@@ -43,10 +44,10 @@ void Player::Update()
 	float mag = sqrtf(posDelta.x * posDelta.x + posDelta.y * posDelta.y);
 	if (mag > 0.0f)
 	{
-		posDelta *= (1.0f / mag);
+		posDelta /= mag;
 
 		// set speed
-		posDelta *= TimeManager::GetFrameTime() * speed;
+		posDelta *= speed * frameTime;
 
 		// move player
 		pos += posDelta;
@@ -54,9 +55,9 @@ void Player::Update()
 	}
 }
 
-void Player::draw(sf::RenderTarget& rTarget, sf::RenderStates states) const
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	rTarget.draw(*spriteCurrent);
+	target.draw(*spriteCurrent);
 }
 
 void Player::MoveNorth()

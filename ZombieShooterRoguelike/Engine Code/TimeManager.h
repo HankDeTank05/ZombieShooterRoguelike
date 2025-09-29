@@ -33,7 +33,7 @@ private: // engine/internal API functions (static)
 	static void ProcessTime();
 
 public: // public API functions (static)
-	static float GetCurrentTime();
+	static float GetCurrentGameTime();
 	static float GetFrameTime();
 
 	static void Terminate();

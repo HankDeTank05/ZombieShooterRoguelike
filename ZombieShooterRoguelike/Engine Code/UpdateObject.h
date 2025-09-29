@@ -16,7 +16,7 @@ public:
 	UpdateObject& operator=(const UpdateObject& u);
 	virtual ~UpdateObject();
 
-	virtual void Update() = 0;
+	virtual void Update(float frameTime) = 0;
 	
 protected:
 	virtual void EnqueueForUpdateRegistration() final;

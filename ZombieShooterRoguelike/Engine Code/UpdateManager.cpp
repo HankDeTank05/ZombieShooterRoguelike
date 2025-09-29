@@ -1,5 +1,7 @@
 #include "UpdateManager.h"
 
+// engine includes
+#include "TimeManager.h"
 #include "UpdateObject.h"
 
 UpdateManager::UpdateManager()
@@ -38,8 +40,9 @@ void UpdateManager::Deregister(UpdateListPos updateListPos)
 
 void UpdateManager::UpdateElements()
 {
+	float frameTime = TimeManager::GetFrameTime();
 	for (UpdateListPos pos = updateList.begin(); pos != updateList.end(); pos++)
 	{
-		(*pos)->Update();
+		(*pos)->Update(frameTime);
 	}
 }

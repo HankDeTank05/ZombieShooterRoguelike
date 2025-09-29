@@ -24,12 +24,12 @@ Pellet::~Pellet()
 	// do nothing
 }
 
-void Pellet::Update()
+void Pellet::Update(float frameTime)
 {
-	pos += dir;
+	pos += dir * frameTime; // TODO: multiply movement by speed
 }
 
-void Pellet::draw(sf::RenderTarget& rTarget, sf::RenderStates states) const
+void Pellet::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	rTarget.draw(*pSprite);
+	target.draw(*pSprite);
 }

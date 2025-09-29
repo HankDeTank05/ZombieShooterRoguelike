@@ -17,8 +17,8 @@ public:
 	Player& operator=(const Player& p) = delete;
 	virtual ~Player();
 
-	virtual void Update() override;
-	virtual void draw(sf::RenderTarget& rTarget, sf::RenderStates states) const override;
+	virtual void Update(float frameTime) override;
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 private:
 	void MoveNorth();

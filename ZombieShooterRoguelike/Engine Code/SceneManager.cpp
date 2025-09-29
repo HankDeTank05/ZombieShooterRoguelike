@@ -12,7 +12,8 @@ SceneManager::SceneManager()
 
 SceneManager::~SceneManager()
 {
-	// do nothing
+	pCurrentScene->SceneEnd();
+	delete pCurrentScene;
 }
 
 SceneManager& SceneManager::Instance()
@@ -29,14 +30,14 @@ void SceneManager::privSetStartScene(Scene* pScene)
 	pCurrentScene = pScene;
 }
 
-void SceneManager::privInitStartScene()
-{
-	pCurrentScene->Initialize();
-}
-
 Scene* SceneManager::privGetCurrentScene()
 {
 	return pCurrentScene;
+}
+
+void SceneManager::privInitStartScene()
+{
+	pCurrentScene->Initialize();
 }
 
 void SceneManager::privUpdateCurrentScene()
@@ -59,14 +60,14 @@ void SceneManager::SetStartScene(Scene* pScene)
 	Instance().privSetStartScene(pScene);
 }
 
-void SceneManager::InitStartScene()
-{
-	Instance().privInitStartScene();
-}
-
 Scene* SceneManager::GetCurrentScene()
 {
 	return Instance().privGetCurrentScene();
+}
+
+void SceneManager::InitStartScene()
+{
+	Instance().privInitStartScene();
 }
 
 void SceneManager::UpdateCurrentScene()

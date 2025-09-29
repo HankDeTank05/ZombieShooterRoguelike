@@ -22,9 +22,9 @@ private: // member variables
 
 private: // private functions
 	void privSetStartScene(Scene* pScene);
-	void privInitStartScene();
 	Scene* privGetCurrentScene();
 
+	void privInitStartScene();
 	void privUpdateCurrentScene();
 	void privDrawCurrentScene();
 
@@ -32,14 +32,15 @@ private: // private functions
 
 public: // API functions (static)
 	static void SetStartScene(Scene* pScene);
-	static void InitStartScene();
 	static Scene* GetCurrentScene();
-
-	static void UpdateCurrentScene();
-	static void DrawCurrentScene();
 
 private: // internal-only api functions
 	friend class SceneManagerAttorney;
+
+	static void InitStartScene();
+	static void UpdateCurrentScene();
+	static void DrawCurrentScene();
+
 	static void Terminate();
 	
 };

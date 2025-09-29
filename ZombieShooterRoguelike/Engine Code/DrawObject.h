@@ -1,10 +1,12 @@
 #ifndef DRAW_OBJECT_H
 #define DRAW_OBJECT_H
 
+// library includes
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
+// engine includes
 #include "RegistrationState.h"
 #include "DrawManager.h"
 
@@ -20,7 +22,7 @@ public:
 	DrawObject& operator=(const DrawObject& d) = delete;
 	virtual ~DrawObject();
 
-	virtual void draw(sf::RenderTarget& rTarget, sf::RenderStates states) const = 0;
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const = 0;
 protected:
 
 	virtual void EnqueueForDrawRegistration() final;

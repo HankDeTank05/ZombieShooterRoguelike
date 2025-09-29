@@ -49,7 +49,7 @@ void TimeManager::ProcessTime()
 	Instance().privProcessTime();
 }
 
-float TimeManager::GetCurrentTime()
+float TimeManager::GetCurrentGameTime()
 {
 	return Instance().privGetCurrentTime();
 }
